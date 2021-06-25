@@ -1,0 +1,24 @@
+@use "./variables";
+
+@mixin btn-prim {
+    padding: 0.9rem 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    color: white;
+    font-weight: 400;
+    background-image: linear-gradient(
+      to right bottom,
+      variables.$clr-second,
+      variables.$clr-prim
+    );
+    box-shadow: 2px 2px 5px -3px rgb(0 0 0 / 50%);
+  }
+
+  //button with grey background
+@mixin btn-second {
+    background-color: variables.$clr-four;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: variables.$shadow;
+}

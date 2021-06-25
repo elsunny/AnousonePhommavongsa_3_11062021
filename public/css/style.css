@@ -1,0 +1,191 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  padding: 1rem;
+  font-weight: 700;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+header {
+  position: relative;
+}
+
+.header-logo {
+  padding-top: 2rem;
+  padding-bottom: 0.8rem;
+  text-align: center;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+footer {
+  padding-bottom: 2rem;
+  background-color: #383838;
+}
+footer .footer-logo {
+  filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(328deg) brightness(105%) contrast(105%);
+  padding: 1.5rem 1rem;
+}
+footer .footer-nav a {
+  color: white;
+  padding: 0.5rem 0 0.2rem 1rem;
+}
+
+.locate-btn {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #eaeaea, rgba(0, 0, 0, 0));
+  padding: 1rem;
+  text-align: center;
+}
+.locate-btn input {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  padding-left: 1rem;
+  line-height: 2rem;
+}
+.locate-btn ::placeholder {
+  color: black;
+  font-size: 1.1rem;
+}
+
+.header-btn-back {
+  position: absolute;
+  top: calc(100%/2) rem;
+  left: 0rem;
+}
+
+.explorez {
+  background-color: #e7e7e7;
+  text-align: center;
+  padding: 1rem 1rem 4rem 1rem;
+}
+.explorez p {
+  color: #6b6b6b;
+  padding: 0.2rem 0 2rem 0;
+  font-size: large;
+}
+.explorez button {
+  padding: 0.9rem 1.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  color: white;
+  font-weight: 400;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+.navigation-btns > a {
+  background-color: #eaeaea;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+.navigation-btns > a ul {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.navigation-btns > a ul > li {
+  list-style-type: none;
+}
+.navigation-btns > a ul li:nth-child(1) {
+  color: white;
+  background-color: #9356DC;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  margin: auto 0;
+  border-radius: 50%;
+  position: absolute;
+  left: -22px;
+}
+.navigation-btns > a ul li:nth-of-type(2) {
+  color: #9e9e9e;
+  font-size: larger;
+}
+
+.restaurants {
+  background-color: #eaeaea;
+  padding: 1rem;
+}
+.restaurants figure {
+  border-radius: 1rem;
+  background-color: white;
+  width: 90vw;
+  height: 35vh;
+  margin: 1rem auto;
+  position: relative;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+.restaurants figure[data-status=new] > div:nth-of-type(1) {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #99E2D0;
+  padding: 0.3rem 1rem;
+  border-radius: 0.2rem;
+  color: #278870;
+}
+.restaurants figure[data-status=old] > div:nth-of-type(1) {
+  display: none;
+}
+.restaurants figure > div:nth-of-type(2) {
+  background-size: cover;
+  width: 100%;
+  height: 73%;
+  border-radius: 1rem 1rem 0 0;
+  background-position: center;
+}
+.restaurants figure > figcaption {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.restaurants figure > figcaption p {
+  padding: 0.5rem 0;
+  color: #6b6b6b;
+}
+
+.restaurant-1-img {
+  background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.restaurant-2-img {
+  background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+.restaurant-3-img {
+  background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.restaurant-4-img {
+  background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.restaurant-pic img {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "OC P3 project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elsunny/AnousonePhommavongsa_3_11062021.git"
+  },
+  "author": "Anousone Phommavongsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elsunny/AnousonePhommavongsa_3_11062021/issues"
+  },
+  "homepage": "https://github.com/elsunny/AnousonePhommavongsa_3_11062021#readme"
+}
