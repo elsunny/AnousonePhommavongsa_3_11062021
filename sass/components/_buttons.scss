@@ -1,0 +1,42 @@
+@use "../abstracts";
+
+.locate {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        abstracts.$clr-four,
+        rgba(0, 0, 0, 0)
+    );
+&__btn {
+  padding: 1rem;
+  text-align: center;
+}
+&__input {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    padding-left: 1rem;
+    line-height: 2rem;
+}
+::placeholder {
+    color: black;
+    font-size: 1.1rem;
+}
+}
+
+.navigation__btns {
+    &__btn {
+        @include abstracts.btn-second;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        span:nth-child(1) {
+            @include abstracts.clr-circle;
+            position: absolute;
+            left: -0.7rem;
+        }
+        span:nth-of-type(2) {
+            color: darken(abstracts.$clr-four, 30%);
+            font-size: larger;
+        }
+    }
+    }
