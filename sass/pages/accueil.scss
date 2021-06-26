@@ -1,0 +1,118 @@
+@use "../utils";
+@use "../base";
+@use "../layout/layout";
+
+
+
+.locate {
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            utils.$clr-four,
+            rgba(0, 0, 0, 0)
+        );
+    &__btn {
+      padding: 1rem;
+      text-align: center;
+    }
+    &__input {
+        border: none;
+        background: rgba(0, 0, 0, 0);
+        padding-left: 1rem;
+        line-height: 2rem;
+    }
+    ::placeholder {
+        color: black;
+        font-size: 1.1rem;
+    }
+}
+
+.explorez {
+    background-color: darken(utils.$clr-four, 1%);
+    text-align: center;
+    padding: 1rem 1rem 4rem 1rem;
+    &__subtitle {
+        color: darken(utils.$clr-four, 50%);
+        padding: 0.2rem 0 2rem 0;
+        font-size: large;
+        display: inline-block;
+    }
+    &__btn {
+        @include utils.btn-prim();
+    }
+}
+
+.navigation__btns {
+  &__btn {
+        @include utils.btn-second;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        span:nth-child(1) {
+            @include utils.clr-circle;
+            position: absolute;
+            left: -0.7rem;
+        }
+        span:nth-of-type(2) {
+            color: darken(utils.$clr-four, 30%);
+            font-size: larger;
+        }
+    }
+}
+
+.restaurants {
+    background-color: utils.$clr-four;
+    padding: 1rem;
+}
+
+.restaurant__card {
+        @include utils.card-background;
+        position: relative;
+        &[data-status="new"] > .restaurant__card__status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            @include utils.card-status;
+        }
+        &[data-status="old"] > .restaurant__card__status {
+            display: none;
+        }
+        &__img {
+            background-size: cover;
+            width: 100%;
+            height: 72%;
+            border-radius: 1rem 1rem 0 0;
+            background-position: center;
+        }
+        &[data-restaurant="1"] {
+          .restaurant__card__img {
+            background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+          }
+        }
+        &[data-restaurant="2"] {
+          .restaurant__card__img {
+            background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+          }
+        }
+        &[data-restaurant="3"] {
+          .restaurant__card__img {
+            background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+          }
+        }
+        &[data-restaurant="4"] {
+          .restaurant__card__img {
+            background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+          }
+        }
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            span {
+              display: inline-block;
+              padding: 0.5rem 0;
+              color: darken(utils.$clr-four, 50%);
+            }
+        }
+}
+

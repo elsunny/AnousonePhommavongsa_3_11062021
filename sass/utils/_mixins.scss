@@ -1,24 +1,54 @@
 @use "./variables";
 
-@mixin btn-prim {
+@mixin bottom-shadow {
+    box-shadow: 0 0px 10px 0 rgb(0 0 0 / 40%);
+}
+
+@mixin btn-prim(
+    $clr-start: variables.$clr-prim,
+    $clr-end: variables.$clr-second
+) {
     padding: 0.9rem 1.5rem;
     border-radius: 1.5rem;
     border: none;
     color: white;
     font-weight: 400;
-    background-image: linear-gradient(
-      to right bottom,
-      variables.$clr-second,
-      variables.$clr-prim
-    );
-    box-shadow: 2px 2px 5px -3px rgb(0 0 0 / 50%);
-  }
+    background-image: linear-gradient(to right bottom, $clr-start, $clr-end);
+    box-shadow:  variables.$shadow;
+}
 
-  //button with grey background
+@mixin clr-circle {
+    color: white;
+    background-color: variables.$clr-prim;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    margin: auto 0;
+    border-radius: 50%;
+}
+
+//button with grey background
 @mixin btn-second {
     background-color: variables.$clr-four;
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
     box-shadow: variables.$shadow;
+}
+
+@mixin card-background {
+    border-radius: 1rem;
+    background-color: white;
+    width: 90vw;
+    height: 35vh;
+    margin: 1rem auto;
+    box-shadow: variables.$shadow;
+}
+
+@mixin card-status {
+    background-color: variables.$clr-third;
+    padding: 0.3rem 1rem;
+    border-radius: 0.2rem;
+    color: darken(variables.$clr-third, 40%);
 }
