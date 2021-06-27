@@ -2,7 +2,7 @@
 
 .navigation__btns {
     &__btn {
-        @include abstracts.btn-second;
+        @include abstracts.btn-second();
         display: flex;
         justify-content: space-evenly;
         position: relative;

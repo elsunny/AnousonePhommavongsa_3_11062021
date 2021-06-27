@@ -76,10 +76,13 @@ padding: 1rem;
         }
         &__favorite {
           padding: 0.6rem;
+          svg.svg-inline--fa.fa-heart.fa-w-16 {
+            width: 1.5rem;
         }
-        .fa-heart {
-          width: 1.6rem;
-          height: auto;
         }
     }
+}
+
+svg.svg-inline--fa.fa-heart.fa-w-16 {
+  width: 1.5rem;
 }

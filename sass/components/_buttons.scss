@@ -7,36 +7,49 @@
         abstracts.$clr-four,
         rgba(0, 0, 0, 0)
     );
-&__btn {
-  padding: 1rem;
-  text-align: center;
-}
-&__input {
-    border: none;
-    background: rgba(0, 0, 0, 0);
-    padding-left: 1rem;
-    line-height: 2rem;
-}
-::placeholder {
-    color: black;
-    font-size: 1.1rem;
-}
+    &__btn {
+        padding: 1rem;
+        text-align: center;
+    }
+    &__input {
+        border: none;
+        background: rgba(0, 0, 0, 0);
+        padding-left: 1rem;
+        line-height: 2rem;
+    }
+    ::placeholder {
+        color: black;
+        font-size: 1.1rem;
+    }
 }
 
-.navigation__btns {
+//heart icon to be fixed conflict with user agent style
+.fa-heart {
+    width: 1.6rem;
+    height: auto;
+}
+
+svg.svg-inline--fa.fa-heart.fa-w-16 {
+    width: 1.3rem;
+}
+
+//header back arrow button
+.header {
+    position: relative;
+    &__arrow {
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
+    }
+}
+
+//commandez button on restaurant page
+.commandez {
+    text-align: center;
+    padding: 2rem;
     &__btn {
-        @include abstracts.btn-second;
-        display: flex;
-        justify-content: space-evenly;
-        position: relative;
-        span:nth-child(1) {
-            @include abstracts.clr-circle;
-            position: absolute;
-            left: -0.7rem;
-        }
-        span:nth-of-type(2) {
-            color: darken(abstracts.$clr-four, 30%);
-            font-size: larger;
-        }
+        @include abstracts.btn-prim();
+        width: 60vw;
+        font-size: 1rem;
     }
-    }
+}

@@ -1,7 +1,8 @@
 @use "../abstracts";
 
+
 .header__logo {
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 0.8rem;
   text-align: center;
   @include abstracts.bottom-shadow;

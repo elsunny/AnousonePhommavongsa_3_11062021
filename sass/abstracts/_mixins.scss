@@ -4,6 +4,10 @@
     box-shadow: 0 0px 10px 0 rgb(0 0 0 / 40%);
 }
 
+@mixin text-gray {
+    color: darken(variables.$clr-four, 50%);
+}
+
 @mixin btn-prim(
     $clr-start: variables.$clr-prim,
     $clr-end: variables.$clr-second
@@ -28,14 +32,23 @@
     border-radius: 50%;
 }
 
-//button with grey background
-@mixin btn-second {
-    background-color: variables.$clr-four;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    box-shadow: variables.$shadow;
-}
+//button with colored background
+// @mixin btn-second {
+//     background-color: variables.$clr-four;
+//     padding: 1rem;
+//     border-radius: 1rem;
+//     margin: 1rem;
+//     box-shadow: variables.$shadow;
+// }
+
+@mixin btn-second ($clr: variables.$clr-four) {
+        background-color: $clr;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        box-shadow: variables.$shadow;
+    }
+
 
 @mixin card-background {
     border-radius: 1rem;
