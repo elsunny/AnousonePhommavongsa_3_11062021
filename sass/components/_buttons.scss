@@ -1,5 +1,6 @@
 @use "../abstracts";
 
+//choose city location button
 .locate {
     background-image: linear-gradient(
         to right,
@@ -29,6 +30,7 @@
     height: auto;
 }
 
+//heart button size
 svg.svg-inline--fa.fa-heart.fa-w-16 {
     width: 1.3rem;
 }

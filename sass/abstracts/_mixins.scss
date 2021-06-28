@@ -8,6 +8,7 @@
     color: darken(variables.$clr-four, 50%);
 }
 
+//gradient colored button with shadow
 @mixin btn-prim(
     $clr-start: variables.$clr-prim,
     $clr-end: variables.$clr-second
@@ -18,9 +19,10 @@
     color: white;
     font-weight: 400;
     background-image: linear-gradient(to right bottom, $clr-start, $clr-end);
-    box-shadow:  variables.$shadow;
+    box-shadow: variables.$shadow;
 }
 
+// colored disk background for the navigation numbers
 @mixin clr-circle {
     color: white;
     background-color: variables.$clr-prim;
@@ -33,35 +35,41 @@
 }
 
 //button with colored background
-// @mixin btn-second {
-//     background-color: variables.$clr-four;
-//     padding: 1rem;
-//     border-radius: 1rem;
-//     margin: 1rem;
-//     box-shadow: variables.$shadow;
-// }
+@mixin btn-second($clr: variables.$clr-four) {
+    background-color: $clr;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: variables.$shadow;
+}
 
-@mixin btn-second ($clr: variables.$clr-four) {
-        background-color: $clr;
-        padding: 1rem;
-        border-radius: 1rem;
-        margin: 1rem;
-        box-shadow: variables.$shadow;
-    }
-
-
+//card background
 @mixin card-background {
     border-radius: 1rem;
     background-color: white;
-    width: 90vw;
+    width: 21rem;
     height: 35vh;
     margin: 1rem auto;
     box-shadow: variables.$shadow;
 }
 
+//card label status "nouveau"
 @mixin card-status {
     background-color: variables.$clr-third;
     padding: 0.3rem 1rem;
     border-radius: 0.2rem;
     color: darken(variables.$clr-third, 40%);
+}
+
+//media queries
+@mixin tablet-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, desktop)) {
+        @content;
+    }
 }

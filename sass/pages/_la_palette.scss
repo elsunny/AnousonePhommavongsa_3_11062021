@@ -2,35 +2,4 @@
 @use "../components";
 @use "../layout";
 
-//menu background overflow the image
-.restaurant {
-    border-radius: 2.5rem 2.5rem 0 0;
-    background-color: abstracts.$clr-four;
-    margin-top: -2rem;
-    z-index: 10;
-    position: relative;
-}
 
-.menu {
-    padding-top: 2rem;
-}
-
-//colored background card 
-.menu__meal {
-    display: flex;
-    justify-content: space-between;
-    @include abstracts.btn-second(white);
-    &__description {
-        p {
-            color: darken(abstracts.$clr-four, 50%);
-            font-size: 1rem;
-            font-size: 0.8rem;
-            padding-top: 0.2rem;
-        }
-    }
-    span {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-}

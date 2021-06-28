@@ -1,5 +1,15 @@
 @use "../abstracts";
 
+.navigation {
+    @include abstracts.tablet-only {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            align-self: flex-start;
+        }
+    }
+}
 .navigation__btns {
     &__btn {
         @include abstracts.btn-second();
@@ -14,6 +24,12 @@
         span:nth-of-type(2) {
             color: darken(abstracts.$clr-four, 30%);
             font-size: larger;
+        }
+        @include abstracts.tablet-only {
+            width: 50vw;
+        }
+        @include abstracts.desktop-only {
+            width: 30vw;
         }
     }
     }

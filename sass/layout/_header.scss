@@ -6,4 +6,8 @@
   padding-bottom: 0.8rem;
   text-align: center;
   @include abstracts.bottom-shadow;
+  @include abstracts.tablet-only {
+    text-align: left;
+    padding-left: 3rem;
+  }
 }

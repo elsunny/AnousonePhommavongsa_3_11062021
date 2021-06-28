@@ -89,6 +89,12 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   text-align: center;
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 599px) {
+  .header__logo {
+    text-align: left;
+    padding-left: 3rem;
+  }
+}
 
 .footer {
   padding-bottom: 2rem;
@@ -110,6 +116,17 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
 }
 .footer__nav li:nth-of-type(2) span {
   padding-left: 0.3rem;
+}
+
+@media screen and (min-width: 599px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation__title {
+    align-self: flex-start;
+  }
 }
 
 .navigation__btns__btn {
@@ -137,6 +154,16 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
 .navigation__btns__btn span:nth-of-type(2) {
   color: #9e9e9e;
   font-size: larger;
+}
+@media screen and (min-width: 599px) {
+  .navigation__btns__btn {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .navigation__btns__btn {
+    width: 30vw;
+  }
 }
 
 .restaurant__title {
@@ -166,7 +193,57 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   bottom: -2px;
 }
 
+.restaurant {
+  border-radius: 2.5rem 2.5rem 0 0;
+  background-color: #eaeaea;
+  margin-top: -2rem;
+  z-index: 10;
+  position: relative;
+}
+
+.menu {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 599px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__title {
+    font-size: 2rem;
+  }
+}
+.menu__meal {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 599px) {
+  .menu__meal {
+    width: 60vw;
+  }
+}
+.menu__meal__description p {
+  color: #6b6b6b;
+  font-size: 1rem;
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+}
+.menu__meal span {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 .explorez {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #e7e7e7;
   text-align: center;
   padding: 1rem 1rem 4rem 1rem;
@@ -185,21 +262,39 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   font-weight: 400;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  width: 60vw;
+}
+@media screen and (min-width: 599px) {
+  .explorez__btn {
+    width: 30vw;
+  }
 }
 
 .restaurants {
   background-color: #eaeaea;
   padding: 1rem;
 }
+@media screen and (min-width: 599px) {
+  .restaurants__main {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
 
 .restaurant__card {
   border-radius: 1rem;
   background-color: white;
-  width: 90vw;
+  width: 21rem;
   height: 35vh;
   margin: 1rem auto;
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
   position: relative;
+}
+@media screen and (min-width: 1199px) {
+  .restaurant__card {
+    width: 35rem;
+    height: 65vh;
+  }
 }
 .restaurant__card[data-status=new] > .restaurant__card__status {
   position: absolute;
@@ -247,43 +342,6 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
 }
 .restaurant__card__info__favorite svg.svg-inline--fa.fa-heart.fa-w-16 {
   width: 1.5rem;
-}
-
-svg.svg-inline--fa.fa-heart.fa-w-16 {
-  width: 1.5rem;
-}
-
-.restaurant {
-  border-radius: 2.5rem 2.5rem 0 0;
-  background-color: #eaeaea;
-  margin-top: -2rem;
-  z-index: 10;
-  position: relative;
-}
-
-.menu {
-  padding-top: 2rem;
-}
-
-.menu__meal {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 1rem;
-  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
-}
-.menu__meal__description p {
-  color: #6b6b6b;
-  font-size: 1rem;
-  font-size: 0.8rem;
-  padding-top: 0.2rem;
-}
-.menu__meal span {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
