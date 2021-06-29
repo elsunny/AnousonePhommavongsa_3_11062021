@@ -76,11 +76,21 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   width: 60vw;
   font-size: 1rem;
 }
+@media screen and (min-width: 1199px) {
+  .commandez__btn {
+    width: 30vw;
+  }
+}
 
 .restaurant__picture img {
   object-fit: cover;
   height: auto;
   width: 100%;
+}
+@media screen and (min-width: 1199px) {
+  .restaurant__picture {
+    height: 81vh;
+  }
 }
 
 .header__logo {
@@ -228,6 +238,11 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
     width: 60vw;
   }
 }
+@media screen and (min-width: 1199px) {
+  .menu__meal {
+    width: 30vw;
+  }
+}
 .menu__meal__description p {
   color: #6b6b6b;
   font-size: 1rem;
@@ -238,6 +253,14 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+@media screen and (min-width: 1199px) {
+  .menu__main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
 }
 
 .explorez {

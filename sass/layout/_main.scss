@@ -27,6 +27,9 @@
         @include abstracts.tablet-only {
             width: 60vw;
         }
+        @include abstracts.desktop-only {
+            width: 30vw;
+        }
         &__description {
             p {
                 color: darken(abstracts.$clr-four, 50%);
@@ -39,7 +42,14 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-        
+        }
     }
+}
+
+.menu__main {
+    @include abstracts.desktop-only {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
     }
 }

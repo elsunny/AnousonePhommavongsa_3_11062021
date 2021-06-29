@@ -53,5 +53,8 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
         @include abstracts.btn-prim();
         width: 60vw;
         font-size: 1rem;
+        @include abstracts.desktop-only {
+            width: 30vw;
+        }
     }
 }
