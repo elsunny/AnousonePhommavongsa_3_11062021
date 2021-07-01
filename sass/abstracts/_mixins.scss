@@ -1,5 +1,6 @@
 @use "./variables";
 
+//shadow under ohmyfood title homepage
 @mixin bottom-shadow {
     box-shadow: 0 0px 10px 0 rgb(0 0 0 / 40%);
 }
@@ -8,7 +9,7 @@
     color: darken(variables.$clr-four, 50%);
 }
 
-//gradient colored button with shadow
+//gradient colored main action button with shadow
 @mixin btn-prim(
     $clr-start: variables.$clr-prim,
     $clr-end: variables.$clr-second
@@ -20,6 +21,33 @@
     font-weight: 400;
     background-image: linear-gradient(to right bottom, $clr-start, $clr-end);
     box-shadow: variables.$shadow;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    //animation on opacity lighten gradient background & accent shadow
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 1.5rem;
+        background-image: linear-gradient(
+            to right bottom,
+            lighten($clr-start, 5%),
+            lighten($clr-end, 5%)
+        );
+        opacity: 0;
+        z-index: -1;
+        box-shadow: variables.$shadow-accent;
+        transition: opacity 250ms ease-in-out;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
 }
 
 // colored disk background for the navigation numbers
@@ -41,6 +69,25 @@
     border-radius: 1rem;
     margin: 1rem;
     box-shadow: variables.$shadow;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 1rem;
+        background-color: lighten($clr, 5%);
+        box-shadow: variables.$shadow-accent;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
 }
 
 //card background

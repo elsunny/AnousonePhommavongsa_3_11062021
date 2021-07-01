@@ -21,6 +21,7 @@
         }
     }
     &__meal {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         @include abstracts.btn-second(white);
@@ -46,7 +47,16 @@
     }
 }
 
+
+
 .menu__main {
+    @for $i from 1 to 4 {
+        section:nth-child(#{$i}) { 
+            animation: block-fade-in 300ms cubic-bezier(.31,.45,.2,1.01);
+            animation-delay: $i * 100ms;
+            animation-fill-mode: forwards;
+        }
+    }
     @include abstracts.desktop-only {
         display: flex;
         justify-content: space-around;

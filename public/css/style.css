@@ -25,6 +25,16 @@ a:visited {
   color: black;
 }
 
+@keyframes block-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .locate {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #eaeaea, rgba(0, 0, 0, 0));
 }
@@ -73,8 +83,28 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   font-weight: 400;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
   width: 60vw;
   font-size: 1rem;
+}
+.commandez__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(to right bottom, #a16be0, #ff93e1);
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease-in-out;
+}
+.commandez__btn:hover::after {
+  opacity: 1;
 }
 @media screen and (min-width: 1199px) {
   .commandez__btn {
@@ -129,25 +159,39 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
 }
 
 @media screen and (min-width: 599px) {
-  .navigation {
+  .navigation__btns {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navigation__title {
-    align-self: flex-start;
+    flex-wrap: wrap;
   }
 }
-
 .navigation__btns__btn {
   background-color: #eaeaea;
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-evenly;
   position: relative;
+}
+.navigation__btns__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem;
+  background-color: #f7f7f7;
+  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+.navigation__btns__btn:hover::after {
+  opacity: 1;
 }
 .navigation__btns__btn span:nth-child(1) {
   color: white;
@@ -167,7 +211,7 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
 }
 @media screen and (min-width: 599px) {
   .navigation__btns__btn {
-    width: 50vw;
+    width: 29vw;
   }
 }
 @media screen and (min-width: 1199px) {
@@ -225,6 +269,7 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   }
 }
 .menu__meal {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -232,6 +277,25 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   border-radius: 1rem;
   margin: 1rem;
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+.menu__meal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+.menu__meal:hover::after {
+  opacity: 1;
 }
 @media screen and (min-width: 599px) {
   .menu__meal {
@@ -255,6 +319,21 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   align-items: flex-end;
 }
 
+.menu__main section:nth-child(1) {
+  animation: block-fade-in 300ms cubic-bezier(0.31, 0.45, 0.2, 1.01);
+  animation-delay: 100ms;
+  animation-fill-mode: forwards;
+}
+.menu__main section:nth-child(2) {
+  animation: block-fade-in 300ms cubic-bezier(0.31, 0.45, 0.2, 1.01);
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+.menu__main section:nth-child(3) {
+  animation: block-fade-in 300ms cubic-bezier(0.31, 0.45, 0.2, 1.01);
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+}
 @media screen and (min-width: 1199px) {
   .menu__main {
     display: flex;
@@ -285,7 +364,27 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   font-weight: 400;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
   width: 60vw;
+}
+.explorez__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(to right bottom, #a16be0, #ff93e1);
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease-in-out;
+}
+.explorez__btn:hover::after {
+  opacity: 1;
 }
 @media screen and (min-width: 599px) {
   .explorez__btn {
@@ -301,6 +400,7 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
   .restaurants__main {
     display: flex;
     flex-wrap: wrap-reverse;
+    justify-content: space-around;
   }
 }
 

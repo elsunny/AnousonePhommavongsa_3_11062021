@@ -1,16 +1,11 @@
 @use "../abstracts";
 
-.navigation {
+
+.navigation__btns {
     @include abstracts.tablet-only {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__title {
-            align-self: flex-start;
-        }
+        flex-wrap: wrap;
     }
-}
-.navigation__btns {
     &__btn {
         @include abstracts.btn-second();
         display: flex;
@@ -26,7 +21,7 @@
             font-size: larger;
         }
         @include abstracts.tablet-only {
-            width: 50vw;
+            width: 29vw;
         }
         @include abstracts.desktop-only {
             width: 30vw;

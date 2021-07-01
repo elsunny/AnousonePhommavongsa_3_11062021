@@ -16,6 +16,7 @@
         font-size: large;
         display: inline-block;
     }
+    // homepage explorez button
     &__btn {
         @include abstracts.btn-prim();
         width: 60vw;
@@ -23,6 +24,7 @@
             width: 30vw;
         }
     }
+    
 
 }
 
@@ -34,6 +36,7 @@
         @include abstracts.tablet-only {
             display: flex;
             flex-wrap: wrap-reverse;
+            justify-content: space-around;
         }
     }
 }
