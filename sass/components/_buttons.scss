@@ -26,13 +26,18 @@
 
 //heart icon to be fixed conflict with user agent style
 .fa-heart {
+    cursor: pointer;
     width: 1.6rem;
     height: auto;
+    
 }
 
 //heart button size
 svg.svg-inline--fa.fa-heart.fa-w-16 {
     width: 1.3rem;
+    &:hover {
+        animation: pulse-beat 2s 0 0 3;
+    }
 }
 
 //header back arrow button

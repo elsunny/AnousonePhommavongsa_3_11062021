@@ -9,3 +9,12 @@
         transform: translateY(0);
     }
 }
+
+@keyframes pulse-beat {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}

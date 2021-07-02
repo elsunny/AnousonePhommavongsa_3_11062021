@@ -35,6 +35,14 @@ a:visited {
     transform: translateY(0);
   }
 }
+@keyframes pulse-beat {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
 .locate {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #eaeaea, rgba(0, 0, 0, 0));
 }
@@ -54,12 +62,16 @@ a:visited {
 }
 
 .fa-heart {
+  cursor: pointer;
   width: 1.6rem;
   height: auto;
 }
 
 svg.svg-inline--fa.fa-heart.fa-w-16 {
   width: 1.3rem;
+}
+svg.svg-inline--fa.fa-heart.fa-w-16:hover {
+  animation: pulse-beat 2s 0 0 3;
 }
 
 .header {
