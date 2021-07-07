@@ -50,10 +50,12 @@
 
 
 .menu__main {
+    
     @for $i from 1 to 4 {
         section:nth-child(#{$i}) { 
-            animation: block-fade-in 300ms cubic-bezier(.31,.45,.2,1.01);
-            animation-delay: $i * 100ms;
+            opacity: 0;
+            animation: block-fade-in 3s cubic-bezier(.31,.45,.2,1.01);
+            animation-delay: $i * 1s;
             animation-fill-mode: forwards;
         }
     }

@@ -4,7 +4,8 @@
   "description": "OC P3 project",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch main.scss public/css/style.css"
+    "sass": "sass --watch main.scss public/css/style.css",
+    "serve": "serve public"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elsunny/AnousonePhommavongsa_3_11062021/issues"
   },
-  "homepage": "https://github.com/elsunny/AnousonePhommavongsa_3_11062021#readme"
+  "homepage": "https://github.com/elsunny/AnousonePhommavongsa_3_11062021#readme",
+  "devDependencies": {
+    "serve": "^12.0.0"
+  }
 }
