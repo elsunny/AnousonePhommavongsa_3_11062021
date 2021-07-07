@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -63,28 +64,6 @@ a:visited {
   font-size: 1.1rem;
 }
 
-.fa-heart {
-  cursor: pointer;
-  width: 1.6rem;
-  height: auto;
-}
-
-svg.svg-inline--fa.fa-heart.fa-w-16 {
-  width: 1.3rem;
-}
-svg.svg-inline--fa.fa-heart.fa-w-16:hover {
-  animation: pulse-beat 2s 0 0 3;
-}
-
-.header {
-  position: relative;
-}
-.header__arrow {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-}
-
 .commandez {
   text-align: center;
   padding: 2rem;
@@ -124,6 +103,46 @@ svg.svg-inline--fa.fa-heart.fa-w-16:hover {
   .commandez__btn {
     width: 30vw;
   }
+}
+
+.icon {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  cursor: pointer;
+}
+
+.icon__heart::before,
+.icon__heart::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  font-size: 1.4em;
+  color: black;
+}
+
+.icon__heart::before {
+  z-index: 10;
+}
+
+.login::after {
+  z-index: 1;
+}
+
+.icon__heart:hover::after {
+  animation: pulse 900ms infinite;
+}
+
+input:checked + label > div.icon__heart::before,
+input:checked + label > div.icon__heart::after {
+  color: #9356DC;
+  font-weight: 900;
 }
 
 .restaurant__picture img {
@@ -474,14 +493,12 @@ svg.svg-inline--fa.fa-heart.fa-w-16:hover {
 }
 .restaurant__card__info span {
   display: inline-block;
-  padding: 0.5rem 0;
+  padding: 0.2rem 0;
   color: #6b6b6b;
 }
 .restaurant__card__info__favorite {
-  padding: 0.6rem;
-}
-.restaurant__card__info__favorite svg.svg-inline--fa.fa-heart.fa-w-16 {
-  width: 1.5rem;
+  width: 2rem;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

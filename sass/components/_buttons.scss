@@ -24,32 +24,6 @@
     }
 }
 
-//heart icon to be fixed conflict with user agent style
-.fa-heart {
-    cursor: pointer;
-    width: 1.6rem;
-    height: auto;
-    
-}
-
-//heart button size
-svg.svg-inline--fa.fa-heart.fa-w-16 {
-    width: 1.3rem;
-    &:hover {
-        animation: pulse-beat 2s 0 0 3;
-    }
-}
-
-//header back arrow button
-.header {
-    position: relative;
-    &__arrow {
-        position: absolute;
-        top: 2rem;
-        left: 1rem;
-    }
-}
-
 //commandez button on restaurant page
 .commandez {
     text-align: center;
@@ -62,4 +36,45 @@ svg.svg-inline--fa.fa-heart.fa-w-16 {
             width: 30vw;
         }
     }
+}
+
+//heart button icon
+.icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon__heart::before,
+.icon__heart::after {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    font-size: 1.4em;
+    color: black;
+}
+
+.icon__heart::before {
+    z-index: 10;
+}
+
+.login::after {
+    z-index: 1;
+}
+
+.icon__heart:hover::after {
+    animation: pulse 900ms infinite;
+}
+
+input:checked + label > div.icon__heart::before,
+input:checked + label > div.icon__heart::after {
+    color: abstracts.$clr-prim;
+    font-weight: 900;
 }
