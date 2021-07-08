@@ -330,6 +330,24 @@ input:checked + label > div.icon__heart::after {
 .menu__meal:hover::after {
   opacity: 1;
 }
+.menu__meal::before {
+  content: "";
+  width: 100px;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right;
+  opacity: 0;
+  transition: all 500ms;
+}
+.menu__meal:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
 @media screen and (min-width: 599px) {
   .menu__meal {
     width: 60vw;
