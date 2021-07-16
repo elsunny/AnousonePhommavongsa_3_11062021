@@ -2,6 +2,8 @@
 @use "../components";
 @use "../layout";
 
+/* ///////////////////// homepage layout ///////////////// */
+
 //explorez section
 .explorez {
     display: flex;
@@ -16,7 +18,7 @@
         font-size: large;
         display: inline-block;
     }
-    // homepage explorez button
+    //explorez button
     &__btn {
         @include abstracts.btn-prim();
         width: 60vw;
@@ -28,36 +30,68 @@
 
 }
 
-//restaurant background on accueil page
+// navigation section
+.navigation__btns {
+    @include abstracts.tablet-only {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__btn {
+        @include abstracts.btn-second();
+        @include abstracts.tablet-only {
+            width: 29vw;
+        }
+        @include abstracts.desktop-only {
+            width: 30vw;
+        }
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        span:nth-child(1) {
+            @include abstracts.clr-circle;
+            position: absolute;
+            left: -0.7rem;
+        }
+        span:nth-of-type(2) {
+            color: darken(abstracts.$clr-four, 30%);
+            font-size: larger;
+        }
+    }
+    }
+
 .restaurants {
+    //restaurant background on homepage
     background-color: abstracts.$clr-four;
     padding: 1rem;
     &__main {
         @include abstracts.tablet-only {
             display: flex;
-            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
             justify-content: space-around;
         }
     }
 }
 
-//restaurant card background for restaurant and loading image
+
 .restaurant__card {
+    // restaurant card background layout
     @include abstracts.card-background;
     @include abstracts.desktop-only {
         width: 35rem;
         height: 65vh;
     }
     position: relative;
+    // restaurant status nouveau display
     &[data-status="new"] > .restaurant__card__status {
+        @include abstracts.card-status;
         position: absolute;
         top: 1rem;
         right: 1rem;
-        @include abstracts.card-status;
     }
     &[data-status="old"] > .restaurant__card__status {
         display: none;
     }
+    // image style layout
     &__img {
         background-size: cover;
         width: 100%;
@@ -65,26 +99,28 @@
         border-radius: 1rem 1rem 0 0;
         background-position: center;
     }
+    // background image loading url
     &[data-restaurant="1"] {
         .restaurant__card__img {
-            background-image: url(/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
         }
     }
     &[data-restaurant="2"] {
         .restaurant__card__img {
-            background-image: url(/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
         }
     }
     &[data-restaurant="3"] {
         .restaurant__card__img {
-            background-image: url(/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
         }
     }
     &[data-restaurant="4"] {
         .restaurant__card__img {
-            background-image: url(/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
         }
     }
+    // restaurant name and details
     &__info {
         display: flex;
         justify-content: space-between;

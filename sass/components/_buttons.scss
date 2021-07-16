@@ -30,11 +30,11 @@
     padding: 2rem;
     &__btn {
         @include abstracts.btn-prim();
-        width: 60vw;
-        font-size: 1rem;
         @include abstracts.desktop-only {
             width: 30vw;
         }
+        width: 60vw;
+        font-size: 1rem;
     }
 }
 
@@ -78,3 +78,13 @@ input:checked + label > div.icon__heart::after {
     color: abstracts.$clr-prim;
     font-weight: 900;
 }
+
+// checked animation on restaurant page
+.icon__check::after {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.4em;
+    color: black;
+}
+

@@ -11,15 +11,15 @@
 
 //gradient colored main action button with shadow
 @mixin btn-prim(
-    $clr-start: variables.$clr-prim,
-    $clr-end: variables.$clr-second
+    $clr-grad-start: variables.$clr-prim,
+    $clr-grad-end: variables.$clr-second
 ) {
     padding: 0.9rem 1.5rem;
     border-radius: 1.5rem;
     border: none;
     color: white;
     font-weight: 400;
-    background-image: linear-gradient(to right bottom, $clr-start, $clr-end);
+    background-image: linear-gradient(to right bottom, $clr-grad-start, $clr-grad-end);
     box-shadow: variables.$shadow;
     cursor: pointer;
     position: relative;
@@ -35,8 +35,8 @@
         border-radius: 1.5rem;
         background-image: linear-gradient(
             to right bottom,
-            lighten($clr-start, 5%),
-            lighten($clr-end, 5%)
+            lighten($clr-grad-start, 5%),
+            lighten($clr-grad-end, 5%)
         );
         opacity: 0;
         z-index: -1;
@@ -69,28 +69,14 @@
     border-radius: 1rem;
     margin: 1rem;
     box-shadow: variables.$shadow;
-    position: relative;
-    z-index: 1;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 1rem;
-        background-color: lighten($clr, 5%);
-        box-shadow: variables.$shadow-accent;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
-    &:hover::after {
-        opacity: 1;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+    &:hover {
+        transform: scale(1.05);
     }
 }
 
-//card background
+// on homepage card background 
 @mixin card-background {
     border-radius: 1rem;
     background-color: white;

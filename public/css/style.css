@@ -145,22 +145,46 @@ input:checked + label > div.icon__heart::after {
   font-weight: 900;
 }
 
-.restaurant__picture img {
-  object-fit: cover;
-  height: auto;
-  width: 100%;
+.icon__check::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.4em;
+  color: black;
 }
-@media screen and (min-width: 1199px) {
-  .restaurant__picture {
-    height: 81vh;
-  }
+
+.restaurant__title {
+  font-family: "Shrikhand", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu__title {
+  text-transform: uppercase;
+  color: #6b6b6b;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+.menu__title::before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 2.4rem;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: -2px;
 }
 
 .header__logo {
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.4);
   padding-top: 1rem;
   padding-bottom: 0.8rem;
   text-align: center;
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 599px) {
   .header__logo {
@@ -191,211 +215,7 @@ input:checked + label > div.icon__heart::after {
   padding-left: 0.3rem;
 }
 
-@media screen and (min-width: 599px) {
-  .navigation__btns {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-.navigation__btns__btn {
-  background-color: #eaeaea;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 1rem;
-  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-}
-.navigation__btns__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 1rem;
-  background-color: #f7f7f7;
-  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
-.navigation__btns__btn:hover::after {
-  opacity: 1;
-}
-.navigation__btns__btn span:nth-child(1) {
-  color: white;
-  background-color: #9356DC;
-  width: 1.5rem;
-  height: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
-  margin: auto 0;
-  border-radius: 50%;
-  position: absolute;
-  left: -0.7rem;
-}
-.navigation__btns__btn span:nth-of-type(2) {
-  color: #9e9e9e;
-  font-size: larger;
-}
-@media screen and (min-width: 599px) {
-  .navigation__btns__btn {
-    width: 29vw;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .navigation__btns__btn {
-    width: 30vw;
-  }
-}
-
-.restaurant__title {
-  font-family: "Shrikhand", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.menu__title {
-  text-transform: uppercase;
-  color: #6b6b6b;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  font-size: 1.1rem;
-  padding-left: 1rem;
-  position: relative;
-}
-.menu__title::before {
-  content: "";
-  display: inline-block;
-  height: 2px;
-  width: 2.4rem;
-  background-color: #99E2D0;
-  position: absolute;
-  bottom: -2px;
-}
-
-.restaurant {
-  border-radius: 2.5rem 2.5rem 0 0;
-  background-color: #eaeaea;
-  margin-top: -2rem;
-  z-index: 10;
-  position: relative;
-}
-
-.menu {
-  padding-top: 2rem;
-}
-@media screen and (min-width: 599px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu__title {
-    font-size: 2rem;
-  }
-}
-.menu__meal {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 1rem;
-  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 1;
-}
-.menu__meal::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 1rem;
-  background-color: white;
-  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
-.menu__meal:hover::after {
-  opacity: 1;
-}
-.menu__meal::before {
-  content: "";
-  width: 100px;
-  border-radius: 0 1rem 1rem 0;
-  background-color: #99E2D0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transform: scale(0, 1);
-  transform-origin: right;
-  opacity: 0;
-  transition: all 500ms;
-}
-.menu__meal:hover::before {
-  transform: scale(1);
-  opacity: 1;
-}
-@media screen and (min-width: 599px) {
-  .menu__meal {
-    width: 60vw;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .menu__meal {
-    width: 30vw;
-  }
-}
-.menu__meal__description p {
-  color: #6b6b6b;
-  font-size: 1rem;
-  font-size: 0.8rem;
-  padding-top: 0.2rem;
-}
-.menu__meal span {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.menu__main section:nth-child(1) {
-  opacity: 0;
-  animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-.menu__main section:nth-child(2) {
-  opacity: 0;
-  animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-}
-.menu__main section:nth-child(3) {
-  opacity: 0;
-  animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-}
-@media screen and (min-width: 1199px) {
-  .menu__main {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-  }
-}
-
+/* ///////////////////// homepage layout ///////////////// */
 .explorez {
   display: flex;
   flex-direction: column;
@@ -446,6 +266,54 @@ input:checked + label > div.icon__heart::after {
   }
 }
 
+@media screen and (min-width: 599px) {
+  .navigation__btns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.navigation__btns__btn {
+  background-color: #eaeaea;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.navigation__btns__btn:hover {
+  transform: scale(1.05);
+}
+@media screen and (min-width: 599px) {
+  .navigation__btns__btn {
+    width: 29vw;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .navigation__btns__btn {
+    width: 30vw;
+  }
+}
+.navigation__btns__btn span:nth-child(1) {
+  color: white;
+  background-color: #9356DC;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  margin: auto 0;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.7rem;
+}
+.navigation__btns__btn span:nth-of-type(2) {
+  color: #9e9e9e;
+  font-size: larger;
+}
+
 .restaurants {
   background-color: #eaeaea;
   padding: 1rem;
@@ -453,7 +321,7 @@ input:checked + label > div.icon__heart::after {
 @media screen and (min-width: 599px) {
   .restaurants__main {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 }
@@ -474,13 +342,13 @@ input:checked + label > div.icon__heart::after {
   }
 }
 .restaurant__card[data-status=new] > .restaurant__card__status {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   background-color: #99E2D0;
   padding: 0.3rem 1rem;
   border-radius: 0.2rem;
   color: #278870;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 .restaurant__card[data-status=old] > .restaurant__card__status {
   display: none;
@@ -493,16 +361,16 @@ input:checked + label > div.icon__heart::after {
   background-position: center;
 }
 .restaurant__card[data-restaurant="1"] .restaurant__card__img {
-  background-image: url(/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 .restaurant__card[data-restaurant="2"] .restaurant__card__img {
-  background-image: url(/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 .restaurant__card[data-restaurant="3"] .restaurant__card__img {
-  background-image: url(/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 .restaurant__card[data-restaurant="4"] .restaurant__card__img {
-  background-image: url(/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 .restaurant__card__info {
   display: flex;
@@ -517,6 +385,143 @@ input:checked + label > div.icon__heart::after {
 .restaurant__card__info__favorite {
   width: 2rem;
   height: 100%;
+}
+
+.restaurant {
+  border-radius: 2.5rem 2.5rem 0 0;
+  background-color: #eaeaea;
+  margin-top: -2rem;
+  z-index: 10;
+  position: relative;
+}
+.restaurant__picture img {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+}
+@media screen and (min-width: 1199px) {
+  .restaurant__picture {
+    height: 81vh;
+  }
+}
+
+.menu {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 599px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__title {
+    font-size: 2rem;
+  }
+}
+.menu__meal {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+.menu__meal:hover {
+  transform: scale(1.05);
+}
+@media screen and (min-width: 599px) {
+  .menu__meal {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .menu__meal {
+    width: 30vw;
+  }
+}
+.menu__meal:hover .menu__meal__check {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+.menu__meal:hover .menu__meal__check .icon__check {
+  transform: rotate(0deg);
+  transition: transform 600ms ease-in-out;
+}
+.menu__meal:hover .menu__meal__price {
+  position: absolute;
+  bottom: 10%;
+  right: 115px;
+  transition: right 300ms ease-in-out;
+}
+.menu__meal:hover .menu__meal__description {
+  width: 200px;
+}
+.menu__meal__description p {
+  color: #6b6b6b;
+  font-size: 1rem;
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+}
+.menu__meal__description * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__meal__price {
+  position: absolute;
+  right: 10px;
+  bottom: 10%;
+}
+.menu__meal__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  margin: -1rem;
+  width: 30%;
+  transform: translateX(110px);
+}
+.menu__meal__check .icon__check {
+  width: fit-content;
+  transform: rotate(180deg);
+  margin: 0 auto;
+}
+.menu__meal span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1199px) {
+  .menu__main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+}
+.menu__main section:nth-child(1) {
+  opacity: 0;
+  animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.menu__main section:nth-child(2) {
+  opacity: 0;
+  animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.menu__main section:nth-child(3) {
+  opacity: 0;
+  animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

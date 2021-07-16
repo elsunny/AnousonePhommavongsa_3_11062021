@@ -1,0 +1,124 @@
+@use "../abstracts";
+@use "../components";
+@use "../layout";
+
+.restaurant {
+    //menu background overflow the image
+    border-radius: 2.5rem 2.5rem 0 0;
+    background-color: abstracts.$clr-four;
+    margin-top: -2rem;
+    z-index: 10;
+    position: relative;
+    //landing picture
+    &__picture {
+        & img {
+            object-fit: cover;
+            height: auto;
+            width: 100%;
+        }
+        @include abstracts.desktop-only {
+            height: 81vh;
+        }
+    }
+}
+
+//colored background for meal category
+.menu {
+    @include abstracts.tablet-only {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            font-size: 2rem;
+        }
+    }
+    padding-top: 2rem;
+    &__meal {
+        @include abstracts.btn-second(white);
+        @include abstracts.tablet-only {
+            width: 60vw;
+        }
+        @include abstracts.desktop-only {
+            width: 30vw;
+        }
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+        &:hover &__check {
+            transform: translateX(0);
+            transition: transform 300ms ease-in-out;
+            .icon__check {
+                transform: rotate(0deg);
+                transition: transform 600ms ease-in-out;
+            }
+        }
+        &:hover &__price {
+            position: absolute;
+            bottom: 10%;
+            right: 115px;
+            transition: right 300ms ease-in-out;
+        }
+        &:hover &__description {
+            width: 200px;
+        }
+        &__description {
+            p {
+                color: darken(abstracts.$clr-four, 50%);
+                font-size: 1rem;
+                font-size: 0.8rem;
+                padding-top: 0.2rem;
+            }
+            * {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            // &:hover {
+            //     width: 200px;
+            // }
+        }
+        &__price {
+            position: absolute;
+            right: 10px;
+            bottom: 10%;
+        }
+        &__check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: abstracts.$clr-third;
+            margin: -1rem;
+            width: 30%;
+            transform: translateX(110px);
+            .icon__check {
+                width: fit-content;
+                transform: rotate(180deg);
+                margin: 0 auto;
+            }
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.menu__main {
+    @include abstracts.desktop-only {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    // fade in animation
+    @for $i from 1 to 4 {
+        section:nth-child(#{$i}) {
+            opacity: 0;
+            animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
+            animation-delay: $i * 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
