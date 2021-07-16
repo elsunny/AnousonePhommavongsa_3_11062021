@@ -456,11 +456,11 @@ input:checked + label > div.icon__heart::after {
 .menu__meal:hover .menu__meal__price {
   position: absolute;
   bottom: 10%;
-  right: 115px;
+  right: 135px;
   transition: right 300ms ease-in-out;
 }
 .menu__meal:hover .menu__meal__description {
-  width: 200px;
+  width: 170px;
 }
 .menu__meal__description p {
   color: #6b6b6b;
@@ -485,7 +485,7 @@ input:checked + label > div.icon__heart::after {
   background-color: #99E2D0;
   margin: -1rem;
   width: 30%;
-  transform: translateX(110px);
+  transform: translateX(130px);
 }
 .menu__meal__check .icon__check {
   width: fit-content;

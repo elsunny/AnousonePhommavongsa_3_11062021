@@ -57,11 +57,11 @@
         &:hover &__price {
             position: absolute;
             bottom: 10%;
-            right: 115px;
+            right: 135px;
             transition: right 300ms ease-in-out;
         }
         &:hover &__description {
-            width: 200px;
+            width: 170px;
         }
         &__description {
             p {
@@ -91,7 +91,7 @@
             background-color: abstracts.$clr-third;
             margin: -1rem;
             width: 30%;
-            transform: translateX(110px);
+            transform: translateX(130px);
             .icon__check {
                 width: fit-content;
                 transform: rotate(180deg);
