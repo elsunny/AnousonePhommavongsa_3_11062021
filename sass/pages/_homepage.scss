@@ -4,27 +4,38 @@
 
 /* ///////////////////// homepage layout ///////////////// */
 
+.header__logo {
+    @include abstracts.bottom-shadow;
+    @include abstracts.tablet-only {
+      text-align: left;
+      padding-left: 3rem;
+    }
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    text-align: center;
+  }
+
 //explorez section
 .explorez {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: darken(abstracts.$clr-four, 1%);
+    background-color: lighten(abstracts.$clr-four, 6%);
     text-align: center;
-    padding: 1rem 1rem 4rem 1rem;
+    padding: 3rem 1rem 4rem 1rem;
     &__subtitle {
         color: darken(abstracts.$clr-four, 50%);
         padding: 0.2rem 0 2rem 0;
         font-size: large;
-        display: inline-block;
+        // display: inline-block;
     }
     //explorez button
     &__btn {
         @include abstracts.btn-prim();
-        width: 60vw;
-        @include abstracts.tablet-only {
-            width: 30vw;
-        }
+        width: 196px;
+        // @include abstracts.tablet-only {
+        //     width: 196px;
+        // }
     }
     
 
@@ -44,9 +55,13 @@
         @include abstracts.desktop-only {
             width: 30vw;
         }
+        width: 300px;
+        line-height: 50px;
         display: flex;
         justify-content: space-evenly;
         position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
         span:nth-child(1) {
             @include abstracts.clr-circle;
             position: absolute;
@@ -56,6 +71,7 @@
             color: darken(abstracts.$clr-four, 30%);
             font-size: larger;
         }
+        
     }
     }
 
@@ -136,4 +152,6 @@
             }
         }
     }
+
+
 
