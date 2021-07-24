@@ -8,6 +8,8 @@ $shadow: 2px 2px 5px -3px rgb(0 0 0 / 50%);
 $shadow-accent: 3px 3px 7px -3px rgb(0 0 0 / 50%);
 
 $breakpoints: (
+  fold: 280px,
+  iphone: 375px,
   tablet: 599px,
   desktop: 1199px
 );

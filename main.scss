@@ -1,5 +1,8 @@
-@use "./sass/core";
-@use "./sass/pages";
+@use "./sass/core/reset";
+@use "./sass/core/typography";
+@use "./sass/pages/preloader";
+@use "./sass/pages/homepage";
+@use "./sass/pages/restaurant";
 
 
 

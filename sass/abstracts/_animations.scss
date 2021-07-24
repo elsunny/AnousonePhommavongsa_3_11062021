@@ -38,7 +38,7 @@
     }
     100% {
         opacity: 0;
-        // display: none;
-        z-index: -10;
+        pointer-events: none;
+        // z-index: -10;
     }
 }

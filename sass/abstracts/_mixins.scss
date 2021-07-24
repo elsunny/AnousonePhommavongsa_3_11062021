@@ -55,10 +55,10 @@
 @mixin clr-circle {
     color: white;
     background-color: variables.$clr-prim;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 2.3rem;
     margin: auto 0;
     border-radius: 50%;
 }
@@ -66,15 +66,26 @@
 //button with colored background
 @mixin btn-second($clr: variables.$clr-four) {
     background-color: $clr;
-    // line-height: 25px;
-    // padding: 1rem;
     border-radius: 20px;
     margin: 1rem;
     box-shadow: variables.$shadow;
-    transform: scale(1);
-    transition: transform 300ms ease-in-out;
-    &:hover {
-        transform: scale(1.05);
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 20px;
+        background-color: variables.$clr-prim;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+    &:hover::before {
+        opacity: 0.3;
     }
 }
 
@@ -82,8 +93,8 @@
 @mixin card-background {
     border-radius: 1rem;
     background-color: white;
-    width: 21rem;
-    height: 35vh;
+    width: 33rem;
+    height: 25rem;
     margin: 1rem auto;
     box-shadow: variables.$shadow;
 }
@@ -94,9 +105,22 @@
     padding: 0.3rem 1rem;
     border-radius: 0.2rem;
     color: darken(variables.$clr-third, 40%);
+    font-size: 1.4rem;
 }
 
 //media queries
+@mixin fold-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, fold)) {
+        @content;
+    }
+}
+
+@mixin iphone-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, iphone)) {
+        @content;
+    }
+}
+
 @mixin tablet-only {
     @media screen and (min-width: map-get(variables.$breakpoints, tablet)) {
         @content;

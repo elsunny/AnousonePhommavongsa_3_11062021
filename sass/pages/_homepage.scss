@@ -1,11 +1,12 @@
 @use "../abstracts";
-@use "../components";
-@use "../layout";
+@use "../components/buttons";
+@use "../layout/header";
+@use "../layout/footer";
 
 /* ///////////////////// homepage layout ///////////////// */
 
 .header__logo {
-    @include abstracts.bottom-shadow;
+    // @include abstracts.bottom-shadow;
     @include abstracts.tablet-only {
       text-align: left;
       padding-left: 3rem;
@@ -15,6 +16,32 @@
     text-align: center;
   }
 
+  //choose city location button
+.locate {
+    background-color: abstracts.$clr-four;
+    border-top: solid 2px darken($color: abstracts.$clr-four, $amount: 5%);
+    &__btn {
+        @include abstracts.tablet-only {
+            text-align: initial;
+            padding-left: 2.6rem;
+        }
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.6rem;
+        color: darken($color: abstracts.$clr-four, $amount: 50%);
+    }
+    &__input {
+        border: none;
+        background: rgba(0, 0, 0, 0);
+        padding-left: 1rem;
+        line-height: 2rem;
+    }
+    ::placeholder {
+        color: darken($color: abstracts.$clr-four, $amount: 50%);
+        font-size: 1.6rem;
+    }
+}
+
 //explorez section
 .explorez {
     display: flex;
@@ -22,12 +49,18 @@
     align-items: center;
     background-color: lighten(abstracts.$clr-four, 6%);
     text-align: center;
-    padding: 3rem 1rem 4rem 1rem;
+    padding: 1rem 0 4rem 0;
+    &__title {
+        @include abstracts.fold-only {
+            padding: 1rem 2rem;
+        }
+        padding: 1rem 7rem;
+        padding-bottom: 0rem;
+    }
     &__subtitle {
         color: darken(abstracts.$clr-four, 50%);
-        padding: 0.2rem 0 2rem 0;
+        padding: 1rem 0 3rem 0;
         font-size: large;
-        // display: inline-block;
     }
     //explorez button
     &__btn {
@@ -41,60 +74,105 @@
 
 }
 
+.navigation__title,
+.restaurants__title {
+    padding: 2rem 0 1rem 2.3rem;
+}
+
 // navigation section
-.navigation__btns {
-    @include abstracts.tablet-only {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__btn {
-        @include abstracts.btn-second();
+.navigation {
+    padding: 3rem 0;
+    &__btns {
         @include abstracts.tablet-only {
-            width: 29vw;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: initial;
         }
-        @include abstracts.desktop-only {
-            width: 30vw;
-        }
-        width: 300px;
-        line-height: 50px;
         display: flex;
-        justify-content: space-evenly;
-        position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        span:nth-child(1) {
-            @include abstracts.clr-circle;
-            position: absolute;
-            left: -0.7rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__btn {
+            @include abstracts.btn-second();
+            @include abstracts.fold-only {
+                width: 24rem;
+            }
+            @include abstracts.iphone-only {
+                width: 32rem;
+            }
+            @include abstracts.tablet-only {
+                width: 22rem;
+            }
+            @include abstracts.desktop-only {
+                width: 30vw;
+            }
+            width: 33rem;
+            line-height: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            span:nth-child(1) {
+                @include abstracts.clr-circle;
+                position: absolute;
+                left: -1rem;
+                font-size: 1.2rem;
+            }
+            span:nth-of-type(2) {
+                color: darken(abstracts.$clr-four, 30%);
+                font-size: 2rem;
+            }
+            span:nth-of-type(3) {
+                font-size: 1.4rem;
+            }
+            span > i {
+                @include abstracts.fold-only {
+                    width: 4rem;
+                }
+                @include abstracts.tablet-only {
+                        width: 3rem;
+                        font-size: 2rem;
+                }
+                // @include abstracts.tablet-only {
+                //     width: 6rem;
+                // }
+                width: 6rem;
+            }
+            
         }
-        span:nth-of-type(2) {
-            color: darken(abstracts.$clr-four, 30%);
-            font-size: larger;
         }
-        
-    }
-    }
+    
+}
 
 .restaurants {
     //restaurant background on homepage
     background-color: abstracts.$clr-four;
-    padding: 1rem;
+    // padding: 1rem;
     &__main {
         @include abstracts.tablet-only {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
     }
+    
 }
 
 
 .restaurant__card {
     // restaurant card background layout
     @include abstracts.card-background;
+    @include abstracts.fold-only {
+        width: 26rem;
+    }
+    @include abstracts.iphone-only {
+        width: 33rem;
+    }
     @include abstracts.desktop-only {
-        width: 35rem;
-        height: 65vh;
+        width: 60rem;
+        height: 60rem;
     }
     position: relative;
     // restaurant status nouveau display
@@ -138,16 +216,20 @@
     }
     // restaurant name and details
     &__info {
+        @include abstracts.desktop-only {
+            font-size: 25px;
+        }
+        font-size: 16px;
         display: flex;
         justify-content: space-between;
-        padding: 0.5rem;
+        padding: 1em 0.7em;
         span {
             display: inline-block;
-            padding: 0.2rem 0;
+            padding: 0.2em 0;
             color: darken(abstracts.$clr-four, 50%);
         }
         &__favorite {
-                width: 2rem;
+                width: 2em;
                 height: 100%;
             }
         }

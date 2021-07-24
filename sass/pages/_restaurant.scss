@@ -1,6 +1,7 @@
 @use "../abstracts";
-@use "../components";
-@use "../layout";
+@use "../components/buttons";
+@use "../layout/header";
+@use "../layout/footer";
 
 .header__logo {
     @include abstracts.tablet-only {
@@ -8,7 +9,6 @@
       padding-left: 3rem;
     }
     padding-top: 1rem;
-    padding-bottom: 0.8rem;
     text-align: center;
   }
 
