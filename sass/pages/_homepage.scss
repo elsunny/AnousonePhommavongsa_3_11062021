@@ -94,6 +94,7 @@
         align-items: center;
         &__btn {
             @include abstracts.btn-second();
+            @include abstracts.btn-second-over();
             @include abstracts.fold-only {
                 width: 24rem;
             }

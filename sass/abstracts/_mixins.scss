@@ -70,6 +70,9 @@
     margin: 1rem;
     box-shadow: variables.$shadow;
     position: relative;
+}
+
+@mixin btn-second_over ($clr: variables.$clr-prim) {
     &::before {
         content: "";
         width: 100%;
@@ -80,7 +83,8 @@
         left: 0;
         bottom: 0;
         border-radius: 20px;
-        background-color: variables.$clr-prim;
+        // background-color: variables.$clr-prim;
+        background-color: $clr;
         opacity: 0;
         transition: opacity 300ms ease-in-out;
     }

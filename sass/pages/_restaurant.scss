@@ -3,14 +3,35 @@
 @use "../layout/header";
 @use "../layout/footer";
 
-.header__logo {
-    @include abstracts.tablet-only {
-      text-align: left;
-      padding-left: 3rem;
+.header {
+    display: flex;
+    align-items: center;
+    &__arrow {
+        @include abstracts.tablet-only{
+            font-size: 2.8rem;
+            width: 10rem;
+        }
+        font-size: 1.8rem;
+        width: 3rem;
+        text-align: center;
+        flex-grow: 1;
+        
     }
-    padding-top: 1rem;
-    text-align: center;
-  }
+    &__logo {
+        @include abstracts.tablet-only {
+            text-align: left;
+            padding-left: 3rem;
+        }
+        flex-grow: 2;
+        text-align: start;
+        padding-left: 1rem;
+        &__txt {
+            @include abstracts.tablet-only {
+                font-size: 5rem;
+            }
+        }
+    }
+}
 
 .restaurant {
     //menu background overflow the image
@@ -30,6 +51,42 @@
             height: 81vh;
         }
     }
+    &__title {
+        @include abstracts.iphone-only {
+            padding-top: 2.5rem;
+            
+        }
+        display: flex;
+        line-height: 5rem;
+        &__txt {
+            @include abstracts.iphone-only {
+                font-size: 2.5rem;
+            }
+            @include abstracts.tablet-only {
+                font-size: 3.5rem;
+                padding-left: 5rem;
+            }
+            @include abstracts.desktop-only {
+                flex-grow: initial;
+            }
+            flex-grow: 2;
+            padding-left: 2rem;
+            font-family: "Shrikhand", sans-serif;
+        }
+        &__icon {
+            @include abstracts.iphone-only {
+                font-size: 1.6rem;
+            }
+            @include abstracts.desktop-only {
+                padding-left: 3rem;
+                flex-grow: initial;
+            }
+            flex-grow: 1;
+            line-height: 3rem;
+            width: 4rem;
+            font-size: 1.3rem;
+        }
+    }
 }
 
 //colored background for meal category
@@ -43,8 +100,30 @@
         }
     }
     padding-top: 2rem;
+    &__title {
+        text-transform: uppercase;
+        @include abstracts.text-gray;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+        position: relative;
+        font-family: initial;
+        font-size: 1.6rem;
+        padding-left: 1.9rem;
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 2.4rem;
+            background-color: abstracts.$clr-third;
+            position: absolute;
+            bottom: -2px;
+        }
+    }
     &__meal {
         @include abstracts.btn-second(white);
+        @include abstracts.iphone-only {
+            line-height: 2.3rem;
+        }
         @include abstracts.tablet-only {
             width: 60vw;
         }
@@ -65,24 +144,30 @@
             }
         }
         &:hover &__price {
+            @include abstracts.fold-only {
+                right: 52px;
+            }
             position: absolute;
             bottom: 10px;
             right: 140px;
             transition: right 300ms ease-in-out;
         }
         &:hover &__description {
-            @include abstracts.tablet-only {
+            @include abstracts.iphone-only {
                 width: 250px;
             }
-            @include abstracts.desktop-only {
-                width: 190px;
-            }
-            width: 150px;
+            width: 170px;
         }
         &__description {
+            @include abstracts.iphone-only {
+                font-size: 1.6rem;
+            }
             padding: 10px;
             padding-left: 20px;
             p {
+                @include abstracts.iphone-only {
+                    font-size: 1.3rem;
+                }
                 color: darken(abstracts.$clr-four, 50%);
                 font-size: 1rem;
                 font-size: 0.8rem;
@@ -95,11 +180,17 @@
             }
         }
         &__price {
+            @include abstracts.iphone-only {
+                font-size: 1.6rem;
+            }
             position: absolute;
             right: 10px;
             bottom: 10px;
         }
         &__check {
+            @include abstracts.fold-only {
+                width: 45px;
+            }
             display: flex;
             justify-content: center;
             align-items: center;
