@@ -1,4 +1,4 @@
-@use "../abstracts";
+@use "../abstracts/mixins";
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-    @include abstracts.desktop-only {
+    @include mixins.desktop-only {
         font-size: 3.5rem;
     }
     font-weight: 600;

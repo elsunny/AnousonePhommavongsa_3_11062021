@@ -1,8 +1,8 @@
-@use "../abstracts";
+@use "../abstracts/variables";
 
 .footer {
     padding-bottom: 2rem;
-    background-color: darken(abstracts.$clr-four, 70%);
+    background-color: darken(variables.$clr-four, 70%);
     &__logo {
         padding: 1.5rem 2.3rem;
         h3 {

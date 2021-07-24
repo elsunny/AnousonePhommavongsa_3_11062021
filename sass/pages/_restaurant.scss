@@ -1,13 +1,13 @@
-@use "../abstracts";
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
 @use "../components/buttons";
-@use "../layout/header";
 @use "../layout/footer";
 
 .header {
     display: flex;
     align-items: center;
     &__arrow {
-        @include abstracts.tablet-only{
+        @include mixins.tablet-only{
             font-size: 2.8rem;
             width: 10rem;
         }
@@ -18,15 +18,15 @@
         
     }
     &__logo {
-        @include abstracts.tablet-only {
+        @include mixins.tablet-only {
             text-align: left;
             padding-left: 3rem;
         }
         flex-grow: 2;
-        text-align: start;
+        // text-align: start;
         padding-left: 1rem;
         &__txt {
-            @include abstracts.tablet-only {
+            @include mixins.tablet-only {
                 font-size: 5rem;
             }
         }
@@ -36,7 +36,7 @@
 .restaurant {
     //menu background overflow the image
     border-radius: 2.5rem 2.5rem 0 0;
-    background-color: abstracts.$clr-four;
+    background-color: variables.$clr-four;
     margin-top: -2rem;
     z-index: 10;
     position: relative;
@@ -47,26 +47,26 @@
             height: auto;
             width: 100%;
         }
-        @include abstracts.desktop-only {
+        @include mixins.desktop-only {
             height: 81vh;
         }
     }
     &__title {
-        @include abstracts.iphone-only {
+        @include mixins.iphone-only {
             padding-top: 2.5rem;
             
         }
         display: flex;
         line-height: 5rem;
         &__txt {
-            @include abstracts.iphone-only {
+            @include mixins.iphone-only {
                 font-size: 2.5rem;
             }
-            @include abstracts.tablet-only {
+            @include mixins.tablet-only {
                 font-size: 3.5rem;
                 padding-left: 5rem;
             }
-            @include abstracts.desktop-only {
+            @include mixins.desktop-only {
                 flex-grow: initial;
             }
             flex-grow: 2;
@@ -74,10 +74,10 @@
             font-family: "Shrikhand", sans-serif;
         }
         &__icon {
-            @include abstracts.iphone-only {
+            @include mixins.iphone-only {
                 font-size: 1.6rem;
             }
-            @include abstracts.desktop-only {
+            @include mixins.desktop-only {
                 padding-left: 3rem;
                 flex-grow: initial;
             }
@@ -91,7 +91,7 @@
 
 //colored background for meal category
 .menu {
-    @include abstracts.tablet-only {
+    @include mixins.tablet-only {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -102,7 +102,7 @@
     padding-top: 2rem;
     &__title {
         text-transform: uppercase;
-        @include abstracts.text-gray;
+        @include mixins.text-gray;
         font-weight: 300;
         letter-spacing: -0.5px;
         position: relative;
@@ -114,20 +114,20 @@
             display: inline-block;
             height: 2px;
             width: 2.4rem;
-            background-color: abstracts.$clr-third;
+            background-color: variables.$clr-third;
             position: absolute;
             bottom: -2px;
         }
     }
     &__meal {
-        @include abstracts.btn-second(white);
-        @include abstracts.iphone-only {
+        @include mixins.btn-second(white);
+        @include mixins.iphone-only {
             line-height: 2.3rem;
         }
-        @include abstracts.tablet-only {
+        @include mixins.tablet-only {
             width: 60vw;
         }
-        @include abstracts.desktop-only {
+        @include mixins.desktop-only {
             width: 30vw;
         }
         cursor: pointer;
@@ -144,7 +144,7 @@
             }
         }
         &:hover &__price {
-            @include abstracts.fold-only {
+            @include mixins.fold-only {
                 right: 52px;
             }
             position: absolute;
@@ -153,22 +153,22 @@
             transition: right 300ms ease-in-out;
         }
         &:hover &__description {
-            @include abstracts.iphone-only {
+            @include mixins.iphone-only {
                 width: 250px;
             }
             width: 170px;
         }
         &__description {
-            @include abstracts.iphone-only {
+            @include mixins.iphone-only {
                 font-size: 1.6rem;
             }
             padding: 10px;
             padding-left: 20px;
             p {
-                @include abstracts.iphone-only {
+                @include mixins.iphone-only {
                     font-size: 1.3rem;
                 }
-                color: darken(abstracts.$clr-four, 50%);
+                color: darken(variables.$clr-four, 50%);
                 font-size: 1rem;
                 font-size: 0.8rem;
                 // padding-top: 0.2rem;
@@ -180,7 +180,7 @@
             }
         }
         &__price {
-            @include abstracts.iphone-only {
+            @include mixins.iphone-only {
                 font-size: 1.6rem;
             }
             position: absolute;
@@ -188,13 +188,13 @@
             bottom: 10px;
         }
         &__check {
-            @include abstracts.fold-only {
+            @include mixins.fold-only {
                 width: 45px;
             }
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: abstracts.$clr-third;
+            background-color: variables.$clr-third;
             width: 130px;
             transform: translateX(130px);
             position: absolute;
@@ -217,7 +217,7 @@
 }
 
 .menu__main {
-    @include abstracts.desktop-only {
+    @include mixins.desktop-only {
         display: flex;
         justify-content: space-around;
         flex-wrap: nowrap;
