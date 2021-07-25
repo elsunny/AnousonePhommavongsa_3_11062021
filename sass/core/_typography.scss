@@ -5,6 +5,10 @@ html {
     font-size: 62.5%;
 }
 
+*,*::before,*::after {
+    font-size: 1.6rem;
+}
+
 h1, h3 {
     font-family: 'Shrikhand', sans-serif;
 }
@@ -19,6 +23,16 @@ h2 {
     }
     font-weight: 600;
     font-size: 2rem;
+  }
+
+  h4 {
+      @include mixins.fold-only {
+          font-size: 1.4rem;
+      }
+      @include mixins.iphone-only {
+
+          font-size: 2rem;
+      }
   }
 
 

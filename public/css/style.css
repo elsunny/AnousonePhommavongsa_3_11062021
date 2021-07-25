@@ -17,6 +17,10 @@ html {
   font-size: 62.5%;
 }
 
+*, *::before, *::after {
+  font-size: 1.6rem;
+}
+
 h1, h3 {
   font-family: "Shrikhand", sans-serif;
 }
@@ -32,6 +36,17 @@ h2 {
 @media screen and (min-width: 1199px) {
   h2 {
     font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  h4 {
+    font-size: 2rem;
   }
 }
 
@@ -123,11 +138,12 @@ h2 {
   padding: 2rem;
 }
 .commandez__btn {
-  line-height: 4.3rem;
+  width: 20rem;
+  line-height: 5rem;
   border-radius: 3rem;
   border: none;
   color: white;
-  font-weight: 400;
+  font-weight: 600;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -232,13 +248,13 @@ input:checked + label > div.icon__heart::after {
 }
 
 /* ///////////////////// homepage layout ///////////////// */
-.header__logo {
+.homepage__header__logo {
   padding-top: 1rem;
   padding-bottom: 0.8rem;
   text-align: center;
 }
 @media screen and (min-width: 599px) {
-  .header__logo {
+  .homepage__header__logo {
     text-align: left;
     padding-left: 3rem;
   }
@@ -251,7 +267,6 @@ input:checked + label > div.icon__heart::after {
 .locate__btn {
   padding: 1rem;
   text-align: center;
-  font-size: 1.6rem;
   color: #6b6b6b;
 }
 @media screen and (min-width: 599px) {
@@ -268,7 +283,6 @@ input:checked + label > div.icon__heart::after {
 }
 .locate ::placeholder {
   color: #6b6b6b;
-  font-size: 1.6rem;
 }
 
 .explorez {
@@ -290,21 +304,20 @@ input:checked + label > div.icon__heart::after {
 }
 .explorez__subtitle {
   color: #6b6b6b;
-  padding: 1rem 0 3rem 0;
-  font-size: large;
+  padding: 1rem 1rem 3rem 1rem;
 }
 .explorez__btn {
-  line-height: 4.3rem;
+  width: 25rem;
+  line-height: 5rem;
   border-radius: 3rem;
   border: none;
   color: white;
-  font-weight: 400;
+  font-weight: 600;
   background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   position: relative;
   z-index: 1;
-  width: 196px;
 }
 .explorez__btn::after {
   content: "";
@@ -346,19 +359,18 @@ input:checked + label > div.icon__heart::after {
   }
 }
 .navigation__btns__btn {
+  width: 24rem;
   background-color: #eaeaea;
   border-radius: 20px;
-  margin: 1rem;
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
-  position: relative;
-  width: 33rem;
   line-height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  position: relative;
+  margin: 1rem;
 }
 .navigation__btns__btn::before {
   content: "";
@@ -377,11 +389,6 @@ input:checked + label > div.icon__heart::after {
 .navigation__btns__btn:hover::before {
   opacity: 0.3;
 }
-@media screen and (min-width: 280px) {
-  .navigation__btns__btn {
-    width: 24rem;
-  }
-}
 @media screen and (min-width: 375px) {
   .navigation__btns__btn {
     width: 32rem;
@@ -394,28 +401,23 @@ input:checked + label > div.icon__heart::after {
 }
 @media screen and (min-width: 1199px) {
   .navigation__btns__btn {
-    width: 30vw;
+    width: 390px;
   }
 }
 .navigation__btns__btn span:nth-child(1) {
   color: white;
   background-color: #9356DC;
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   text-align: center;
-  line-height: 2.3rem;
+  line-height: 2.5rem;
   margin: auto 0;
   border-radius: 50%;
   position: absolute;
   left: -1rem;
-  font-size: 1.2rem;
 }
 .navigation__btns__btn span:nth-of-type(2) {
   color: #9e9e9e;
-  font-size: 2rem;
-}
-.navigation__btns__btn span:nth-of-type(3) {
-  font-size: 1.4rem;
 }
 .navigation__btns__btn span > i {
   width: 6rem;
@@ -539,6 +541,7 @@ input:checked + label > div.icon__heart::after {
 }
 .header__logo {
   flex-grow: 2;
+  text-align: start;
   padding-left: 1rem;
 }
 @media screen and (min-width: 599px) {
@@ -557,8 +560,10 @@ input:checked + label > div.icon__heart::after {
   border-radius: 2.5rem 2.5rem 0 0;
   background-color: #eaeaea;
   margin-top: -2rem;
-  z-index: 10;
   position: relative;
+}
+.restaurant__picture {
+  overflow: hidden;
 }
 .restaurant__picture img {
   object-fit: cover;
@@ -566,8 +571,13 @@ input:checked + label > div.icon__heart::after {
   width: 100%;
 }
 @media screen and (min-width: 1199px) {
+  .restaurant__picture img {
+    transform: translate(0px, -146px);
+  }
+}
+@media screen and (min-width: 1199px) {
   .restaurant__picture {
-    height: 81vh;
+    height: 50rem;
   }
 }
 .restaurant__title {
@@ -632,13 +642,12 @@ input:checked + label > div.icon__heart::after {
   }
 }
 .menu__title {
-  text-transform: uppercase;
   color: #6b6b6b;
+  text-transform: uppercase;
   font-weight: 300;
   letter-spacing: -0.5px;
   position: relative;
   font-family: initial;
-  font-size: 1.6rem;
   padding-left: 1.9rem;
 }
 .menu__title::before {
@@ -651,31 +660,89 @@ input:checked + label > div.icon__heart::after {
   bottom: -2px;
 }
 .menu__meal {
+  width: 25rem;
   background-color: white;
   border-radius: 20px;
-  margin: 1rem;
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
-  position: relative;
+  line-height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   position: relative;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 280px) {
+  .menu__meal {
+    line-height: 1.8rem;
+  }
 }
 @media screen and (min-width: 375px) {
   .menu__meal {
     line-height: 2.3rem;
+    width: 34rem;
   }
 }
 @media screen and (min-width: 599px) {
   .menu__meal {
-    width: 60vw;
+    width: 50rem;
   }
 }
 @media screen and (min-width: 1199px) {
   .menu__meal {
-    width: 30vw;
+    width: 40rem;
   }
+}
+.menu__meal__description {
+  padding: 10px;
+  padding-left: 20px;
+}
+.menu__meal__description p {
+  color: #6b6b6b;
+  font-size: 1.4rem;
+}
+.menu__meal__description * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__meal__price {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.menu__meal__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 130px;
+  transform: translateX(130px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 300ms ease-in-out;
+}
+@media screen and (min-width: 280px) {
+  .menu__meal__check {
+    width: 70px;
+  }
+}
+.menu__meal__check .icon__check {
+  width: fit-content;
+  transform: rotate(180deg);
+  margin: 0 auto;
+}
+.menu__meal span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu__meal:hover .menu__meal__check {
   transform: translateX(0);
@@ -693,78 +760,21 @@ input:checked + label > div.icon__heart::after {
 }
 @media screen and (min-width: 280px) {
   .menu__meal:hover .menu__meal__price {
-    right: 52px;
+    right: 75px;
   }
 }
 .menu__meal:hover .menu__meal__description {
   width: 170px;
 }
+@media screen and (min-width: 280px) {
+  .menu__meal:hover .menu__meal__description {
+    width: 150px;
+  }
+}
 @media screen and (min-width: 375px) {
   .menu__meal:hover .menu__meal__description {
-    width: 250px;
+    width: 230px;
   }
-}
-.menu__meal__description {
-  padding: 10px;
-  padding-left: 20px;
-}
-@media screen and (min-width: 375px) {
-  .menu__meal__description {
-    font-size: 1.6rem;
-  }
-}
-.menu__meal__description p {
-  color: #6b6b6b;
-  font-size: 1rem;
-  font-size: 0.8rem;
-}
-@media screen and (min-width: 375px) {
-  .menu__meal__description p {
-    font-size: 1.3rem;
-  }
-}
-.menu__meal__description * {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu__meal__price {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-@media screen and (min-width: 375px) {
-  .menu__meal__price {
-    font-size: 1.6rem;
-  }
-}
-.menu__meal__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  width: 130px;
-  transform: translateX(130px);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transition: all 300ms ease-in-out;
-}
-@media screen and (min-width: 280px) {
-  .menu__meal__check {
-    width: 45px;
-  }
-}
-.menu__meal__check .icon__check {
-  width: fit-content;
-  transform: rotate(180deg);
-  margin: 0 auto;
-}
-.menu__meal span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (min-width: 1199px) {
@@ -791,6 +801,46 @@ input:checked + label > div.icon__heart::after {
   animation: block-fade-in 3s cubic-bezier(0.31, 0.45, 0.2, 1.01);
   animation-delay: 3s;
   animation-fill-mode: forwards;
+}
+
+.commandez {
+  text-align: center;
+  padding: 2rem;
+}
+.commandez__btn {
+  width: 20rem;
+  line-height: 5rem;
+  border-radius: 3rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-image: linear-gradient(to right bottom, #9356DC, #FF79DA);
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.commandez__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(to right bottom, #a16be0, #ff93e1);
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease-in-out;
+}
+.commandez__btn:hover::after {
+  opacity: 1;
+}
+@media screen and (min-width: 1199px) {
+  .commandez__btn {
+    width: 30vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

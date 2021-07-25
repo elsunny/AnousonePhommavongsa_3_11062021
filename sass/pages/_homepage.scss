@@ -6,11 +6,9 @@
 
 /* ///////////////////// homepage layout ///////////////// */
 
-.header__logo {
-    // @include mixins.bottom-shadow;
+.homepage__header__logo {
     @include mixins.tablet-only {
-      text-align: left;
-      padding-left: 3rem;
+        @include mixins.pos-logo;
     }
     padding-top: 1rem;
     padding-bottom: 0.8rem;
@@ -28,7 +26,6 @@
         }
         padding: 1rem;
         text-align: center;
-        font-size: 1.6rem;
         color: darken($color: variables.$clr-four, $amount: 50%);
     }
     &__input {
@@ -39,7 +36,6 @@
     }
     ::placeholder {
         color: darken($color: variables.$clr-four, $amount: 50%);
-        font-size: 1.6rem;
     }
 }
 
@@ -60,16 +56,11 @@
     }
     &__subtitle {
         color: darken(variables.$clr-four, 50%);
-        padding: 1rem 0 3rem 0;
-        font-size: large;
+        padding: 1rem 1rem 3rem 1rem;
     }
     //explorez button
     &__btn {
-        @include mixins.btn-prim();
-        width: 196px;
-        // @include mixins.tablet-only {
-        //     width: 196px;
-        // }
+        @include mixins.btn-prim(25rem);
     }
     
 
@@ -96,38 +87,26 @@
         &__btn {
             @include mixins.btn-second();
             @include mixins.btn-second-over();
-            @include mixins.fold-only {
-                width: 24rem;
-            }
             @include mixins.iphone-only {
                 width: 32rem;
-            }
+           }
             @include mixins.tablet-only {
                 width: 22rem;
             }
             @include mixins.desktop-only {
-                width: 30vw;
+                width: 390px;
             }
-            width: 33rem;
-            line-height: 3.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             position: relative;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            margin: 1rem;
             span:nth-child(1) {
                 @include mixins.clr-circle;
                 position: absolute;
                 left: -1rem;
-                font-size: 1.2rem;
             }
             span:nth-of-type(2) {
                 color: darken(variables.$clr-four, 30%);
-                font-size: 2rem;
             }
             span:nth-of-type(3) {
-                font-size: 1.4rem;
             }
             span > i {
                 @include mixins.fold-only {
@@ -137,9 +116,6 @@
                         width: 3rem;
                         font-size: 2rem;
                 }
-                // @include mixins.tablet-only {
-                //     width: 6rem;
-                // }
                 width: 6rem;
             }
             
@@ -151,7 +127,6 @@
 .restaurants {
     //restaurant background on homepage
     background-color: variables.$clr-four;
-    // padding: 1rem;
     &__main {
         @include mixins.tablet-only {
             display: flex;
