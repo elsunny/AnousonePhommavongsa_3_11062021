@@ -391,12 +391,12 @@ input:checked + label > div.icon__heart::after {
 }
 @media screen and (min-width: 375px) {
   .navigation__btns__btn {
-    width: 32rem;
+    width: 320px;
   }
 }
 @media screen and (min-width: 599px) {
   .navigation__btns__btn {
-    width: 22rem;
+    width: 220px;
   }
 }
 @media screen and (min-width: 1199px) {
@@ -456,18 +456,18 @@ input:checked + label > div.icon__heart::after {
 }
 @media screen and (min-width: 280px) {
   .restaurant__card {
-    width: 26rem;
+    width: 260px;
   }
 }
 @media screen and (min-width: 375px) {
   .restaurant__card {
-    width: 33rem;
+    width: 330px;
   }
 }
 @media screen and (min-width: 1199px) {
   .restaurant__card {
-    width: 60rem;
-    height: 60rem;
+    width: 600px;
+    height: 600px;
   }
 }
 .restaurant__card[data-status=new] > .restaurant__card__status {
@@ -567,12 +567,13 @@ input:checked + label > div.icon__heart::after {
 }
 .restaurant__picture img {
   object-fit: cover;
-  height: auto;
+  height: 400px;
   width: 100%;
 }
 @media screen and (min-width: 1199px) {
   .restaurant__picture img {
     transform: translate(0px, -146px);
+    height: 630px;
   }
 }
 @media screen and (min-width: 1199px) {
@@ -660,7 +661,7 @@ input:checked + label > div.icon__heart::after {
   bottom: -2px;
 }
 .menu__meal {
-  width: 25rem;
+  width: 250px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
@@ -685,17 +686,17 @@ input:checked + label > div.icon__heart::after {
 @media screen and (min-width: 375px) {
   .menu__meal {
     line-height: 2.3rem;
-    width: 34rem;
+    width: 340px;
   }
 }
 @media screen and (min-width: 599px) {
   .menu__meal {
-    width: 50rem;
+    width: 500px;
   }
 }
 @media screen and (min-width: 1199px) {
   .menu__meal {
-    width: 40rem;
+    width: 400px;
   }
 }
 .menu__meal__description {

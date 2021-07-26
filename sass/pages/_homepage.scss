@@ -88,10 +88,12 @@
             @include mixins.btn-second();
             @include mixins.btn-second-over();
             @include mixins.iphone-only {
-                width: 32rem;
+                // width: 32rem;
+                width: 320px;
            }
             @include mixins.tablet-only {
-                width: 22rem;
+                // width: 22rem;
+                width: 220px;
             }
             @include mixins.desktop-only {
                 width: 390px;
@@ -142,14 +144,18 @@
     // restaurant card background layout
     @include mixins.card-background;
     @include mixins.fold-only {
-        width: 26rem;
+        // width: 26rem;
+        width: 260px;
     }
     @include mixins.iphone-only {
-        width: 33rem;
+        // width: 33rem;
+        width: 330px;
     }
     @include mixins.desktop-only {
-        width: 60rem;
-        height: 60rem;
+        // width: 60rem;
+        // height: 60rem;
+        width: 600px;
+        height: 600px;
     }
     position: relative;
     // restaurant status nouveau display

@@ -43,9 +43,10 @@
         & img {
             @include mixins.desktop-only {
                 transform: translate(0px, -146px);
+                height: 630px;
             }
             object-fit: cover;
-            height: auto;
+            height: 400px;
             width: 100%;
         }
         @include mixins.desktop-only {
@@ -119,19 +120,19 @@
         }
     }
     &__meal {
-        @include mixins.btn-second(25rem, white);
+        @include mixins.btn-second(250px, white);
         @include mixins.fold-only {
             line-height: 1.8rem;
         }
         @include mixins.iphone-only {
             line-height: 2.3rem;
-            width: 34rem;
+            width: 340px;
         }
         @include mixins.tablet-only {
-            width: 50rem;
+            width: 500px;
         }
         @include mixins.desktop-only {
-            width: 40rem;
+            width: 400px;
         }
         cursor: pointer;
         display: flex;
