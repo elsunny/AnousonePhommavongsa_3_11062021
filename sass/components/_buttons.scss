@@ -3,20 +3,6 @@
 
 
 
-//commandez button on restaurant page
-.commandez {
-    text-align: center;
-    padding: 2rem;
-    &__btn {
-        @include mixins.btn-prim();
-        @include mixins.desktop-only {
-            width: 30vw;
-        }
-        width: 17rem;
-        font-size: 1.6rem;
-    }
-}
-
 //heart button icon
 .icon {
     display: inline-block;

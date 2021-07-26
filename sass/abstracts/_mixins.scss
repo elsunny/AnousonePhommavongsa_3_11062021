@@ -39,7 +39,8 @@
         left: 0;
         bottom: 0;
         right: 0;
-        border-radius: 1.5rem;
+        // border-radius: 1.5rem;
+        border-radius: 3rem;
         background-image: linear-gradient(
             to right bottom,
             lighten($clr-grad-start, 5%),

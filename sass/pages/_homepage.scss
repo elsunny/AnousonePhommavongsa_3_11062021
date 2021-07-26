@@ -88,11 +88,9 @@
             @include mixins.btn-second();
             @include mixins.btn-second-over();
             @include mixins.iphone-only {
-                // width: 32rem;
                 width: 320px;
            }
             @include mixins.tablet-only {
-                // width: 22rem;
                 width: 220px;
             }
             @include mixins.desktop-only {
