@@ -11,22 +11,20 @@
 
 //gradient colored main action button with shadow
 @mixin btn-prim(
-    $width: 20rem,
+    // $width: 20rem,
     $clr-grad-start: variables.$clr-prim,
     $clr-grad-end: variables.$clr-second
 ) {
+    font-size: 16px;
     // padding: 0.9rem 1.5rem;
-    width: $width;
-    line-height: 5rem;
-    border-radius: 3rem;
+    // width: $width;
+    // line-height: 5rem;
+    border-radius: 3em;
+    padding: 1em 2em;
     border: none;
     color: white;
-    font-weight: 600;
-    background-image: linear-gradient(
-        to right bottom,
-        $clr-grad-start,
-        $clr-grad-end
-    );
+    font-weight: 400;
+    background-image: linear-gradient(to right bottom, $clr-grad-start, $clr-grad-end);
     box-shadow: variables.$shadow;
     cursor: pointer;
     position: relative;
@@ -39,13 +37,8 @@
         left: 0;
         bottom: 0;
         right: 0;
-        // border-radius: 1.5rem;
         border-radius: 3rem;
-        background-image: linear-gradient(
-            to right bottom,
-            lighten($clr-grad-start, 5%),
-            lighten($clr-grad-end, 5%)
-        );
+        background-image: linear-gradient(to right bottom, lighten($clr-grad-start, 5%), lighten($clr-grad-end, 5%));
         opacity: 0;
         z-index: -1;
         box-shadow: variables.$shadow-accent;
@@ -62,28 +55,29 @@
 @mixin clr-circle {
     color: white;
     background-color: variables.$clr-prim;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.5em;
+    height: 1.5em;
     text-align: center;
-    line-height: 2.5rem;
-    margin: auto 0;
+    line-height: 1.5rem;
     border-radius: 50%;
+    position: absolute;
 }
 
-//button with colored background
-@mixin btn-second($width: 24rem, $clr: variables.$clr-four) {
-    width: $width;
+//button with grey background
+// @mixin btn-second($width: 24rem, $clr: variables.$clr-four) {
+@mixin btn-second($clr: variables.$clr-four) {
+    // width: $width;
+    font-size: 16px;
     background-color: $clr;
-    border-radius: 20px;
-    // margin: 1rem;
+    border-radius: 3em;
+    margin-bottom: 1em;
     box-shadow: variables.$shadow;
     // position: relative;
-    line-height: 3.5rem;
+    // line-height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1.5em 2em;
 }
 
 @mixin btn-second_over($clr: variables.$clr-prim) {
@@ -96,7 +90,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        border-radius: 20px;
+        border-radius: 3em;
         // background-color: variables.$clr-prim;
         background-color: $clr;
         opacity: 0;
@@ -105,25 +99,29 @@
     &:hover::before {
         opacity: 0.3;
     }
+    &:hover span > i {
+        color: variables.$clr-prim;
+    }
 }
 
 // on homepage card background
 @mixin card-background {
+    font-size: 16px;
     border-radius: 1rem;
     background-color: white;
-    width: 33rem;
-    height: 25rem;
-    margin: 1rem auto;
-    box-shadow: variables.$shadow;
+    height: 18em;
+    box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-bottom: 1em;
 }
 
 //card label status "nouveau"
 @mixin card-status {
+    font-size: 16px;
     background-color: variables.$clr-third;
-    padding: 0.3rem 1rem;
-    border-radius: 0.2rem;
+    padding: 0.5em;
+    border-radius: 0.2em;
     color: darken(variables.$clr-third, 40%);
-    font-size: 1.4rem;
 }
 
 //media queries

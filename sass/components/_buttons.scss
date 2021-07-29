@@ -2,7 +2,6 @@
 @use "../abstracts/mixins";
 
 
-
 //heart button icon
 .icon {
     display: inline-block;
@@ -24,6 +23,7 @@
     left: 0;
     font-size: 1.4em;
     color: black;
+
 }
 
 .icon__heart::before {
@@ -38,8 +38,9 @@
     animation: pulse 900ms infinite;
 }
 
-input:checked + label > div.icon__heart::before,
-input:checked + label > div.icon__heart::after {
+
+input:checked + label > span.icon__heart::before,
+input:checked + label > span.icon__heart::after {
     color: variables.$clr-prim;
     font-weight: 900;
 }
@@ -50,6 +51,6 @@ input:checked + label > div.icon__heart::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 1.4em;
-    color: black;
+    color: white;
 }
 

@@ -2,38 +2,38 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    font-size: 62.5%;
+    font-size: 16px;
 }
 
-*,*::before,*::after {
-    font-size: 1.6rem;
-}
 
 h1, h3 {
     font-family: 'Shrikhand', sans-serif;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    @include mixins.tablet-only {
+        font-size: 2.5rem;
+    }
 }
 
-h2 {
-    @include mixins.desktop-only {
-        font-size: 3.5rem;
-    }
-    font-weight: 600;
-    font-size: 2rem;
-  }
+// h2 {
+//     @include mixins.desktop-only {
+//         font-size: 3.5rem;
+//     }
+//     font-weight: 600;
+//     font-size: 1.8rem;
+//   }
 
-  h4 {
-      @include mixins.fold-only {
-          font-size: 1.4rem;
-      }
-      @include mixins.iphone-only {
+//   h4 {
+//       @include mixins.fold-only {
+//           font-size: 1.4rem;
+//       }
+//       @include mixins.iphone-only {
 
-          font-size: 2rem;
-      }
-  }
+//           font-size: 2rem;
+//       }
+//   }
 
 
 

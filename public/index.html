@@ -22,33 +22,29 @@
             integrity="sha384-9xA4r2/2cctd+IZZKLvI1hmeHZ5Yp8xXkS6J8inDtdyZCqhEHVcTGmSUCbNED5Ae"
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
     <body>
-        <div class="loader">
-            <div class="loader__container">
-                <div class="loader__container__circle">
-                    <i class="fas fa-fish"></i>
-                </div>
-                <div class="loader__container__circle">
-                    <i class="fas fa-lemon"></i>
-                </div>
-                <div class="loader__container__circle">
-                    <i class="fas fa-carrot"></i>
-                </div>
-            </div>
-            <h3>Chargement...</h3>
-        </div>
+        
         <header>
-            <div class="homepage__header__logo">
+            <!-- <div class="homepage__header__logo"> -->
                 <h1 class="header__logo__txt">ohmyfood</h1>
-            </div>
+            <!-- </div> -->
         </header>
         <main>
             <section class="locate">
                 <div class="locate__btn">
                     <i class="fas fa-map-marker-alt"></i>
-                    <input class="locate__input" placeholder="Paris, Belleville" />
+                    <input
+                        class="locate__input"
+                        placeholder="Paris, Belleville"
+                    />
                 </div>
             </section>
             <section class="explorez">
@@ -66,23 +62,23 @@
                 <div class="navigation__btns">
                     <a href="#">
                         <div class="navigation__btns__btn">
-                                <span>1</span>
-                                <span><i class="fas fa-mobile-alt"></i></span>
-                                <span>Choisissez un restaurant</span>
+                            <span>1</span>
+                            <span><i class="fas fa-mobile-alt"></i></span>
+                            <span>Choisissez un restaurant</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="navigation__btns__btn">
-                                <span>2</span>
-                                <span><i class="fas fa-list-ul"></i></span>
-                                <span>Composez votre menu</span>
+                            <span>2</span>
+                            <span><i class="fas fa-list-ul"></i></span>
+                            <span>Composez votre menu</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="navigation__btns__btn">
-                                <span>3</span>
-                                <span><i class="fas fa-store"></i></span>
-                                <span>Dégustez au restaurant</span>
+                            <span>3</span>
+                            <span><i class="fas fa-store"></i></span>
+                            <span>Dégustez au restaurant</span>
                         </div>
                     </a>
                 </div>
@@ -90,88 +86,123 @@
             <section class="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="restaurants__main">
-                    <a href="./la_palette_des_gouts.html" class="restaurant__link">
-                    <figure class="restaurant__card" data-status="new" data-restaurant="1">
-                        <div class="restaurant__card__status">
-                            <span>Nouveau</span>
+                    <div class="restaurants__main__customer">
+                        <a
+                            href="./la_palette_des_gouts.html"
+                            class="restaurant__link"
+                        >
+                            <figure
+                                class="restaurant__card"
+                                data-status="new"
+                                data-restaurant="1"
+                            >
+                                <div class="restaurant__card__status">
+                                    <span>Nouveau</span>
+                                </div>
+                                <div class="restaurant__card__img"></div>
+                                <figcaption class="restaurant__card__info">
+                                    <div class="restaurant__card__info__name">
+                                        <h4>La palette des goûts</h4>
+                                        <span>Ménilmontant</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="restaurants__main__customer__favorite">
+                            <input type="checkbox" id="checkbox1" hidden />
+                            <label class="icon" for="checkbox1">
+                                <span class="icon__heart"></span>
+                            </label>
                         </div>
-                        <div class="restaurant__card__img"></div>
-                        <figcaption class="restaurant__card__info">
-                            <div class="restaurant__card__info__name">
-                                <h4>La palette des goûts</h4>
-                                <span>Ménilmontant</span>
-                            </div>
-                            <div class="restaurant__card__info__favorite">
-                                <input type="checkbox" id="checkbox1" hidden>
-                                <label class="icon" for="checkbox1">
-                                    <div class="icon__heart"></div>
-                                </label>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="./la_note_enchantee.html" class="restaurant__link">
-                    <figure class="restaurant__card" data-status="new" data-restaurant="2">
-                        <div class="restaurant__card__status">
-                            <span>Nouveau</span>
+                    </div>
+                    <div class="restaurants__main__customer">
+                        <a
+                            href="./la_note_enchantee.html"
+                            class="restaurant__link"
+                        >
+                            <figure
+                                class="restaurant__card"
+                                data-status="new"
+                                data-restaurant="2"
+                            >
+                                <div class="restaurant__card__status">
+                                    <span>Nouveau</span>
+                                </div>
+                                <div class="restaurant__card__img"></div>
+                                <figcaption class="restaurant__card__info">
+                                    <div class="restaurant__card__info__name">
+                                        <h4>La note enchantée</h4>
+                                        <span>Charonne</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="restaurants__main__customer__favorite">
+                            <input type="checkbox" id="checkbox2" hidden />
+                            <label class="icon" for="checkbox2">
+                                <span class="icon__heart"></span>
+                            </label>
                         </div>
-                        <div class="restaurant__card__img"></div>
-                        <figcaption class="restaurant__card__info">
-                            <div class="restaurant__card__info__name">
-                                <h4>La note enchantée</h4>
-                                <span>Charonne</span>
-                            </div>
-                            <div class="restaurant__card__info__favorite">
-                                <input type="checkbox" id="checkbox2" hidden>
-                                <label class="icon" for="checkbox2">
-                                    <div class="icon__heart"></div>
-                                </label>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="./a_la_francaise.html" class="restaurant__link">
-                    <figure class="restaurant__card" data-status="old" data-restaurant="3">
-                        <div class="restaurant__card__status">
-                            <span>Nouveau</span>
+                    </div>
+                    <div class="restaurants__main__customer">
+                        <a
+                            href="./a_la_francaise.html"
+                            class="restaurant__link"
+                        >
+                            <figure
+                                class="restaurant__card"
+                                data-status="old"
+                                data-restaurant="3"
+                            >
+                                <div class="restaurant__card__status">
+                                    <span>Nouveau</span>
+                                </div>
+                                <div class="restaurant__card__img"></div>
+                                <figcaption class="restaurant__card__info">
+                                    <div class="restaurant__card__info__name">
+                                        <h4>A la française</h4>
+                                        <span>Cité Rouge</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="restaurants__main__customer__favorite">
+                            <input type="checkbox" id="checkbox3" hidden />
+                            <label class="icon" for="checkbox3">
+                                <span class="icon__heart"></span>
+                            </label>
                         </div>
-                        <div class="restaurant__card__img"></div>
-                        <figcaption class="restaurant__card__info">
-                            <div class="restaurant__card__info__name">
-                                <h4>A la française</h4>
-                                <span>Cité Rouge</span>
-                            </div>
-                            <div class="restaurant__card__info__favorite">
-                                <input type="checkbox" id="checkbox3" hidden>
-                                <label class="icon" for="checkbox3">
-                                    <div class="icon__heart"></div>
-                                </label>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="./le_delice_des_sens.html" class="restaurant__link">
-                    <figure class="restaurant__card" data-status="old" data-restaurant="4">
-                        <div class="restaurant__card__status">
-                            <span>Nouveau</span>
+                    </div>
+                    <div class="restaurants__main__customer">
+                        <a
+                            href="./le_delice_des_sens.html"
+                            class="restaurant__link"
+                        >
+                            <figure
+                                class="restaurant__card"
+                                data-status="old"
+                                data-restaurant="4"
+                            >
+                                <div class="restaurant__card__status">
+                                    <span>Nouveau</span>
+                                </div>
+                                <div class="restaurant__card__img"></div>
+                                <figcaption class="restaurant__card__info">
+                                    <div class="restaurant__card__info__name">
+                                        <h4>Le délice des sens</h4>
+                                        <span>Folie-Méricourt</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="restaurants__main__customer__favorite">
+                            <input type="checkbox" id="checkbox4" hidden />
+                            <label class="icon" for="checkbox4">
+                                <span class="icon__heart"></span>
+                            </label>
                         </div>
-                        <div class="restaurant__card__img"></div>
-                        <figcaption class="restaurant__card__info">
-                            <div class="restaurant__card__info__name">
-                                <h4>Le délice des sens</h4>
-                                <span>Folie-Méricourt</span>
-                            </div>
-                            <div class="restaurant__card__info__favorite">
-                                <input type="checkbox" id="checkbox4" hidden>
-                                <label class="icon" for="checkbox4">
-                                    <div class="icon__heart"></div>
-                                </label>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
+                    </div>
                 </div>
-                
             </section>
         </main>
         <footer class="footer">
@@ -198,12 +229,28 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:contact@ohmyfood.com?subject=Mail from Our Site: customer request">
+                        <a
+                            href="mailto:contact@ohmyfood.com?subject=Mail%20from%20Our%20Site:%20customer%20request"
+                        >
                             <span>contact</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </footer>
+        <div class="loader">
+            <div class="loader__container">
+                <div class="loader__container__circle">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <div class="loader__container__circle">
+                    <i class="fas fa-lemon"></i>
+                </div>
+                <div class="loader__container__circle">
+                    <i class="fas fa-carrot"></i>
+                </div>
+            </div>
+            <h3>Chargement...</h3>
+        </div>
     </body>
 </html>
