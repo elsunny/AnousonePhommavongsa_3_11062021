@@ -4,26 +4,29 @@
 @use "../layout/footer";
 
 .header {
-    display: flex;
-    align-items: center;
+    position: relative;
     &__arrow {
         @include mixins.tablet-only {
-            // font-size: 2.8rem;
-            // width: 10rem;
+            font-size: 25px;
+            top: 30px;
         }
-        font-size: 1.3rem;
-        width: 3rem;
-        text-align: center;
-        flex-grow: 1;
+        font-size: 16px;
+        position: absolute;
+        top: 25px;
+        left: 20px;
     }
     &__logo {
         @include mixins.tablet-only {
-            @include mixins.pos-logo;
+            // @include mixins.pos-logo;
         }
-        flex-grow: 2;
-        text-align: start;
-        padding-left: 1rem;
+        // flex-grow: 2;
+        // text-align: start;
+        // padding-left: 1rem;
         &__txt {
+            @include mixins.tablet-only {
+                text-align: center;
+                /* padding-left: 3rem; */
+            }
             // text-align: initial;
         }
     }

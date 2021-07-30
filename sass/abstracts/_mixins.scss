@@ -126,7 +126,7 @@
 
 //media queries
 @mixin fold-only {
-    @media screen and (min-width: map-get(variables.$breakpoints, fold)) {
+    @media screen and (min-width: map-get(variables.$breakpoints, fold)) and (max-width: map-get(variables.$breakpoints, iphone)) {
         @content;
     }
 }
