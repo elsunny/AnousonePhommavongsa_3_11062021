@@ -1,42 +1,5 @@
-@use "../abstracts";
-
-//choose city location button
-.locate {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        abstracts.$clr-four,
-        rgba(0, 0, 0, 0)
-    );
-    &__btn {
-        padding: 1rem;
-        text-align: center;
-    }
-    &__input {
-        border: none;
-        background: rgba(0, 0, 0, 0);
-        padding-left: 1rem;
-        line-height: 2rem;
-    }
-    ::placeholder {
-        color: black;
-        font-size: 1.1rem;
-    }
-}
-
-//commandez button on restaurant page
-.commandez {
-    text-align: center;
-    padding: 2rem;
-    &__btn {
-        @include abstracts.btn-prim();
-        @include abstracts.desktop-only {
-            width: 30vw;
-        }
-        width: 60vw;
-        font-size: 1rem;
-    }
-}
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 //heart button icon
 .icon {
@@ -61,6 +24,9 @@
     color: black;
 }
 
+
+
+
 .icon__heart::before {
     z-index: 10;
 }
@@ -73,9 +39,9 @@
     animation: pulse 900ms infinite;
 }
 
-input:checked + label > div.icon__heart::before,
-input:checked + label > div.icon__heart::after {
-    color: abstracts.$clr-prim;
+input:checked + label > span.icon__heart::before,
+input:checked + label > span.icon__heart::after {
+    color: variables.$clr-prim;
     font-weight: 900;
 }
 
@@ -85,6 +51,5 @@ input:checked + label > div.icon__heart::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 1.4em;
-    color: black;
+    color: white;
 }
-

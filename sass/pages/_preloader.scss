@@ -1,0 +1,45 @@
+@use "../abstracts/variables";
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: variables.$clr-prim;
+    opacity: 1;
+    animation: opacity 3s forwards;
+    &__container {
+        transform-origin: center center;
+        animation: rotate 2s linear infinite;
+        margin-right: 5rem;
+        &__circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            background-color: variables.$clr-prim;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: grow 1.5s linear infinite;
+            &:nth-child(2) {
+                background-color: variables.$clr-second;
+                animation-delay: 0.6s;
+            }
+            &:nth-child(3) {
+                background-color: lighten(variables.$clr-second, 10%);
+                animation-delay: 1s;
+            }
+        }
+    }
+}

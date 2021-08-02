@@ -20,3 +20,33 @@
     }
 }
 
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes opacity {
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none; //allow mouse event under the element
+    }
+}
