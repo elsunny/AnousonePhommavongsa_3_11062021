@@ -54,6 +54,7 @@
         display: flex;
         padding-top: 20px;
         font-size: 13px;
+        position: relative;
         &__txt {
             @include mixins.tablet-only {
                 font-size: 2rem;
@@ -69,17 +70,24 @@
         &__icon {
             @include mixins.iphone-only {
                 font-size: 1.3rem;
+                left: 320px;
+                top: 40px;
             }
             @include mixins.tablet-only {
                 font-size: 1.4rem;
+                left: 432px;
+                top: 42px;
             }
             @include mixins.desktop-only {
                 padding-left: 3rem;
-                flex-grow: initial;
+                position: absolute;
+                left: 420px;
+                top: 44px;
             }
-            flex-grow: 1;
             font-size: 1.1rem;
-            padding-right: 1rem;
+            position: absolute;
+            left: 230px;
+            top: 22px;
         }
     }
 }

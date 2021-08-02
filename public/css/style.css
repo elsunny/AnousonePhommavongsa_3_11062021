@@ -574,6 +574,7 @@ input:checked + label > span.icon__heart::after {
   display: flex;
   padding-top: 20px;
   font-size: 13px;
+  position: relative;
 }
 @media screen and (min-width: 320px) {
   .restaurant__title {
@@ -598,24 +599,31 @@ input:checked + label > span.icon__heart::after {
   }
 }
 .restaurant__title__icon {
-  flex-grow: 1;
   font-size: 1.1rem;
-  padding-right: 1rem;
+  position: absolute;
+  left: 230px;
+  top: 22px;
 }
 @media screen and (min-width: 320px) {
   .restaurant__title__icon {
     font-size: 1.3rem;
+    left: 320px;
+    top: 40px;
   }
 }
 @media screen and (min-width: 768px) {
   .restaurant__title__icon {
     font-size: 1.4rem;
+    left: 432px;
+    top: 42px;
   }
 }
 @media screen and (min-width: 1280px) {
   .restaurant__title__icon {
     padding-left: 3rem;
-    flex-grow: initial;
+    position: absolute;
+    left: 420px;
+    top: 44px;
   }
 }
 

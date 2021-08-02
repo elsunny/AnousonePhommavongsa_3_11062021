@@ -10,10 +10,7 @@
 }
 
 //gradient colored main action button with shadow
-@mixin btn-prim(
-    $clr-grad-start: variables.$clr-prim,
-    $clr-grad-end: variables.$clr-second
-) {
+@mixin btn-prim($clr-grad-start: variables.$clr-prim, $clr-grad-end: variables.$clr-second) {
     font-size: 16px;
     border-radius: 3em;
     padding: 1em 2em;
@@ -114,7 +111,6 @@
     border-radius: 0.2em;
     color: darken(variables.$clr-third, 40%);
 }
-
 
 @mixin iphone-only {
     @media screen and (min-width: map-get(variables.$breakpoints, iphone)) {
