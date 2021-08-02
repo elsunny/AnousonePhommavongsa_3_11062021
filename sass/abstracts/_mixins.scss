@@ -11,14 +11,10 @@
 
 //gradient colored main action button with shadow
 @mixin btn-prim(
-    // $width: 20rem,
     $clr-grad-start: variables.$clr-prim,
     $clr-grad-end: variables.$clr-second
 ) {
     font-size: 16px;
-    // padding: 0.9rem 1.5rem;
-    // width: $width;
-    // line-height: 5rem;
     border-radius: 3em;
     padding: 1em 2em;
     border: none;
@@ -64,16 +60,12 @@
 }
 
 //button with grey background
-// @mixin btn-second($width: 24rem, $clr: variables.$clr-four) {
 @mixin btn-second($clr: variables.$clr-four) {
-    // width: $width;
     font-size: 16px;
     background-color: $clr;
     border-radius: 3em;
     margin-bottom: 1em;
     box-shadow: variables.$shadow;
-    // position: relative;
-    // line-height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +83,6 @@
         left: 0;
         bottom: 0;
         border-radius: 3em;
-        // background-color: variables.$clr-prim;
         background-color: $clr;
         opacity: 0;
         transition: opacity 300ms ease-in-out;
@@ -124,12 +115,6 @@
     color: darken(variables.$clr-third, 40%);
 }
 
-//media queries
-@mixin fold-only {
-    @media screen and (min-width: map-get(variables.$breakpoints, fold)) and (max-width: map-get(variables.$breakpoints, iphone)) {
-        @content;
-    }
-}
 
 @mixin iphone-only {
     @media screen and (min-width: map-get(variables.$breakpoints, iphone)) {

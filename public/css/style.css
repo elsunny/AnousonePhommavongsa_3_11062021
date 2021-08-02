@@ -27,7 +27,7 @@ h3 {
 h1 {
   font-size: 1.5rem;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -176,7 +176,7 @@ input:checked + label > span.icon__heart::after {
   padding-bottom: 50px;
   background-color: #383838;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .footer {
     padding-left: 16px;
   }
@@ -201,7 +201,7 @@ input:checked + label > span.icon__heart::after {
   text-align: center;
   padding: 16px;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .header__logo__txt {
     text-align: left;
     padding-left: 3rem;
@@ -216,7 +216,7 @@ input:checked + label > span.icon__heart::after {
   padding: 16px;
   text-align: center;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .locate__btn {
     text-align: initial;
     padding-left: 2.6rem;
@@ -241,14 +241,10 @@ input:checked + label > span.icon__heart::after {
   padding-bottom: 50px;
 }
 .explorez__title {
+  width: 250px;
   padding-top: 50px;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
-  .explorez__title {
-    width: 250px;
-  }
-}
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .explorez__title {
     width: initial;
   }
@@ -303,7 +299,7 @@ input:checked + label > span.icon__heart::after {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 1280px) {
   .navigation__btns {
     flex-wrap: wrap;
     flex-direction: initial;
@@ -320,6 +316,7 @@ input:checked + label > span.icon__heart::after {
   justify-content: center;
   align-items: center;
   padding: 1.5em 2em;
+  font-size: 13px;
   position: relative;
 }
 .navigation__btns__btn::before {
@@ -342,22 +339,17 @@ input:checked + label > span.icon__heart::after {
 .navigation__btns__btn:hover span > i {
   color: #9356dc;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
-  .navigation__btns__btn {
-    font-size: 13px;
-  }
-}
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   .navigation__btns__btn {
     width: 320px;
   }
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .navigation__btns__btn {
     padding: 1em 3em;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .navigation__btns__btn {
     width: 390px;
   }
@@ -378,14 +370,10 @@ input:checked + label > span.icon__heart::after {
   color: #9e9e9e;
 }
 .navigation__btns__btn span > i {
+  width: 4rem;
   font-size: 20px;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
-  .navigation__btns__btn span > i {
-    width: 4rem;
-  }
-}
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .navigation__btns__btn span > i {
     width: 3rem;
     font-size: 1rem;
@@ -401,16 +389,26 @@ input:checked + label > span.icon__heart::after {
   flex-direction: column;
   padding-bottom: 50px;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .restaurants__main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: initial;
   }
 }
 .restaurants__main__customer {
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__main__customer {
+    margin: 0 27px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .restaurants__main__customer {
+    margin: 0 34px;
+  }
 }
 .restaurants__main__customer__favorite {
   position: absolute;
@@ -428,19 +426,15 @@ input:checked + label > span.icon__heart::after {
   box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
   position: relative;
   margin-bottom: 1em;
+  width: 260px;
   position: relative;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
-  .restaurant__card {
-    width: 260px;
-  }
-}
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   .restaurant__card {
     width: 330px;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .restaurant__card {
     width: 350px;
     height: 450px;
@@ -466,7 +460,7 @@ input:checked + label > span.icon__heart::after {
   border-radius: 1em 1em 0 0;
   background-position: center;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .restaurant__card__img {
     height: 22em;
   }
@@ -508,16 +502,15 @@ input:checked + label > span.icon__heart::after {
   top: 25px;
   left: 20px;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .header__arrow {
     font-size: 25px;
     top: 30px;
   }
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .header__logo__txt {
     text-align: center;
-    /* padding-left: 3rem; */
   }
 }
 
@@ -535,23 +528,26 @@ input:checked + label > span.icon__heart::after {
   width: 100%;
   height: 19rem;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .restaurant__picture img {
     transform: translate(0px, -146px);
     height: 630px;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .restaurant__picture {
     height: 29rem;
   }
 }
 .restaurant__title {
   display: flex;
+  padding-top: 20px;
+  font-size: 13px;
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   .restaurant__title {
     padding-top: 2.5rem;
+    font-size: initial;
   }
 }
 .restaurant__title__txt {
@@ -559,28 +555,33 @@ input:checked + label > span.icon__heart::after {
   padding-left: 16px;
   font-family: "Shrikhand", sans-serif;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .restaurant__title__txt {
     font-size: 2rem;
     padding-left: 5rem;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .restaurant__title__txt {
     flex-grow: initial;
   }
 }
 .restaurant__title__icon {
   flex-grow: 1;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-right: 1rem;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 320px) {
+  .restaurant__title__icon {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .restaurant__title__icon {
     font-size: 1.4rem;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .restaurant__title__icon {
     padding-left: 3rem;
     flex-grow: initial;
@@ -590,7 +591,7 @@ input:checked + label > span.icon__heart::after {
 .menu {
   padding-top: 2rem;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .menu {
     display: flex;
     flex-direction: column;
@@ -630,6 +631,7 @@ input:checked + label > span.icon__heart::after {
   justify-content: center;
   align-items: center;
   padding: 1.5em 2em;
+  line-height: 1.8rem;
   border-radius: 1.5em;
   padding: initial;
   cursor: pointer;
@@ -639,22 +641,17 @@ input:checked + label > span.icon__heart::after {
   position: relative;
   margin: 1rem auto;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
-  .menu__meal {
-    line-height: 1.8rem;
-  }
-}
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   .menu__meal {
     line-height: 1.5rem;
   }
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 768px) {
   .menu__meal {
     width: 500px;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .menu__meal {
     width: 400px;
   }
@@ -668,10 +665,12 @@ input:checked + label > span.icon__heart::after {
   font-size: 0.9rem;
   font-weight: 300;
 }
-.menu__meal__description * {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+@media screen and (min-width: 320px) {
+  .menu__meal__description * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .menu__meal__price {
   position: absolute;
@@ -680,11 +679,11 @@ input:checked + label > span.icon__heart::after {
   font-weight: 600;
 }
 .menu__meal__check {
+  width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
-  width: 130px;
   transform: translateX(130px);
   position: absolute;
   top: 0;
@@ -692,9 +691,9 @@ input:checked + label > span.icon__heart::after {
   bottom: 0;
   transition: all 300ms ease-in-out;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
+@media screen and (min-width: 320px) {
   .menu__meal__check {
-    width: 70px;
+    width: 130px;
   }
 }
 .menu__meal__check .icon__check {
@@ -718,29 +717,24 @@ input:checked + label > span.icon__heart::after {
 .menu__meal:hover .menu__meal__price {
   position: absolute;
   bottom: 10px;
-  right: 140px;
+  right: 75px;
   transition: right 300ms ease-in-out;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
+@media screen and (min-width: 320px) {
   .menu__meal:hover .menu__meal__price {
-    right: 75px;
+    right: 140px;
   }
 }
 .menu__meal:hover .menu__meal__description {
-  width: 170px;
+  width: 150px;
 }
-@media screen and (min-width: 280px) and (max-width: 375px) {
-  .menu__meal:hover .menu__meal__description {
-    width: 150px;
-  }
-}
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   .menu__meal:hover .menu__meal__description {
     width: 230px;
   }
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .menu__main {
     display: flex;
     justify-content: space-around;
@@ -801,7 +795,7 @@ input:checked + label > span.icon__heart::after {
 .commandez__btn:hover::after {
   opacity: 1;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1280px) {
   .commandez__btn {
     width: 30vw;
   }

@@ -44,24 +44,17 @@
     align-items: center;
     background-color: lighten(variables.$clr-four, 6%);
     text-align: center;
-    // padding: 1rem 0 4rem 0;
     padding-bottom: variables.$spacer-l;
     &__title {
-        @include mixins.fold-only {
-            // padding: 1rem 2rem;
-            width: 250px;
-        }
         @include mixins.desktop-only {
             width: initial;
         }
+        width: 250px;
         padding-top: variables.$spacer-l;
-        // padding: 1rem 7rem;
-        // padding-bottom: 0rem;
     }
     &__subtitle {
         width: 280px;
         color: darken(variables.$clr-four, 50%);
-        // padding: 1rem 1rem 3rem 1rem;
         padding-top: variables.$spacer-s;
         padding-bottom: variables.$spacer-l;
     }
@@ -73,7 +66,6 @@
 
 .navigation__title,
 .restaurants__title {
-    // padding: 2rem 0 1rem 2.3rem;
     padding-top: variables.$spacer-l;
     padding-bottom: variables.$spacer-s;
     padding-left: variables.$spacer-s;
@@ -81,10 +73,8 @@
 
 // navigation section
 .navigation {
-    // padding: 3rem 0;
     &__btns {
-        @include mixins.tablet-only {
-            // display: flex;
+        @include mixins.desktop-only {
             flex-wrap: wrap;
             flex-direction: initial;
             justify-content: space-around;
@@ -96,14 +86,11 @@
         &__btn {
             @include mixins.btn-second();
             @include mixins.btn-second-over();
-            @include mixins.fold-only {
-                font-size: 13px;
-            }
+            font-size: 13px;
             @include mixins.iphone-only {
                 width: 320px;
             }
             @include mixins.tablet-only {
-                // width: 220px;
                 padding: 1em 3em;
             }
             @include mixins.desktop-only {
@@ -118,12 +105,9 @@
             span:nth-of-type(2) {
                 color: darken(variables.$clr-four, 30%);
             }
-            span:nth-of-type(3) {
-            }
+
             span > i {
-                @include mixins.fold-only {
-                    width: 4rem;
-                }
+                width: 4rem;
                 @include mixins.tablet-only {
                     width: 3rem;
                     font-size: 1rem;
@@ -141,7 +125,7 @@
         @include mixins.tablet-only {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: flex-start;
             flex-direction: initial;
         }
         display: flex;
@@ -150,6 +134,12 @@
         padding-bottom: variables.$spacer-l;
 
         &__customer {
+            @include mixins.tablet-only {
+                margin: 0 27px;
+            }
+            @include mixins.desktop-only {
+                margin: 0 34px;
+            }
             position: relative;
             &__favorite {
                 position: absolute;
@@ -165,17 +155,11 @@
 .restaurant__card {
     // restaurant card background layout
     @include mixins.card-background;
-    @include mixins.fold-only {
-        // width: 26rem;
-        width: 260px;
-    }
+    width: 260px;
     @include mixins.iphone-only {
-        // width: 33rem;
         width: 330px;
     }
     @include mixins.desktop-only {
-        // width: 60rem;
-        // height: 60rem;
         width: 350px;
         height: 450px;
     }
@@ -224,9 +208,6 @@
     }
     // restaurant name and details
     &__info {
-        // @include mixins.desktop-only {
-        //     font-size: 25px;
-        // }
         font-size: 16px;
         display: flex;
         justify-content: space-between;
