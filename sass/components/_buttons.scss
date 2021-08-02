@@ -1,7 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
-
 //heart button icon
 .icon {
     display: inline-block;
@@ -23,8 +22,10 @@
     left: 0;
     font-size: 1.4em;
     color: black;
-
 }
+
+
+
 
 .icon__heart::before {
     z-index: 10;
@@ -37,7 +38,6 @@
 .icon__heart:hover::after {
     animation: pulse 900ms infinite;
 }
-
 
 input:checked + label > span.icon__heart::before,
 input:checked + label > span.icon__heart::after {
@@ -53,4 +53,3 @@ input:checked + label > span.icon__heart::after {
     font-size: 1.4em;
     color: white;
 }
-

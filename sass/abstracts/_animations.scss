@@ -1,5 +1,3 @@
-
-
 @keyframes block-fade-in {
     0% {
         opacity: 0;
@@ -19,6 +17,15 @@
     100% {
         transform: scale(1.3);
         opacity: 0;
+    }
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -43,4 +50,3 @@
         pointer-events: none; //allow mouse event under the element
     }
 }
-

@@ -27,7 +27,7 @@
         text-align: center;
     }
     &__input {
-        width: 120px; 
+        width: 120px;
         border: none;
         padding-left: variables.$spacer-s;
         background: rgba(0, 0, 0, 0);
@@ -49,12 +49,12 @@
     &__title {
         @include mixins.fold-only {
             // padding: 1rem 2rem;
-            padding-top: variables.$spacer-l;
             width: 250px;
         }
         @include mixins.desktop-only {
             width: initial;
         }
+        padding-top: variables.$spacer-l;
         // padding: 1rem 7rem;
         // padding-bottom: 0rem;
     }
@@ -103,7 +103,7 @@
                 width: 320px;
             }
             @include mixins.tablet-only {
-                width: 220px;
+                // width: 220px;
                 padding: 1em 3em;
             }
             @include mixins.desktop-only {
@@ -141,14 +141,14 @@
         @include mixins.tablet-only {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-around;
             flex-direction: initial;
         }
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding-bottom: variables.$spacer-l;
-        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: variables.$spacer-l;
+
         &__customer {
             position: relative;
             &__favorite {
@@ -176,7 +176,7 @@
     @include mixins.desktop-only {
         // width: 60rem;
         // height: 60rem;
-        width: 600px;
+        width: 350px;
         height: 450px;
     }
     position: relative;
@@ -224,9 +224,9 @@
     }
     // restaurant name and details
     &__info {
-        @include mixins.desktop-only {
-            font-size: 25px;
-        }
+        // @include mixins.desktop-only {
+        //     font-size: 25px;
+        // }
         font-size: 16px;
         display: flex;
         justify-content: space-between;
