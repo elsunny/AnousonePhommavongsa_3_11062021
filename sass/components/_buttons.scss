@@ -22,7 +22,6 @@
     left: 0;
     font-size: 1.4em;
     color: black;
-    opacity: 1;
 }
 
 .icon__heart::after {
@@ -38,13 +37,10 @@
 }
 
 .icon__heart:hover::after {
-    animation: fill-color 900ms linear forwards;
+    animation: fill-color 900ms linear;
 }
 
-.icon__heart:hover::before {
-    opacity: 0;
-    transition: opacity 300ms linear;
-}
+
 
 input:checked + label > span.icon__heart::before,
 input:checked + label > span.icon__heart::after {
