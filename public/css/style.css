@@ -97,11 +97,22 @@ h1 {
     opacity: 0;
   }
 }
-@keyframes animation {
+@keyframes fill-color {
   0% {
+    transform: scale(0.95);
     opacity: 0;
   }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.3);
+  }
   100% {
+    transform: scale(0.95);
     opacity: 1;
   }
 }
@@ -134,8 +145,7 @@ h1 {
   cursor: pointer;
 }
 
-.icon__heart::before,
-.icon__heart::after {
+.icon__heart::before {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
@@ -144,18 +154,28 @@ h1 {
   left: 0;
   font-size: 1.4em;
   color: black;
+  opacity: 1;
 }
 
-.icon__heart::before {
-  z-index: 10;
-}
-
-.login::after {
-  z-index: 1;
+.icon__heart::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: -1rem;
+  opacity: 0;
+  left: 0;
+  font-size: 1.4em;
+  color: #9356dc;
 }
 
 .icon__heart:hover::after {
-  animation: pulse 900ms infinite;
+  animation: fill-color 900ms linear forwards;
+}
+
+.icon__heart:hover::before {
+  opacity: 0;
+  transition: opacity 300ms linear;
 }
 
 input:checked + label > span.icon__heart::before,
@@ -413,9 +433,14 @@ input:checked + label > span.icon__heart::after {
 .restaurants__main__customer__favorite {
   position: absolute;
   right: 5px;
-  bottom: 50px;
+  bottom: 48px;
   height: 30px;
   width: 30px;
+}
+@media screen and (min-width: 1280px) {
+  .restaurants__main__customer__favorite {
+    bottom: 65px;
+  }
 }
 
 .restaurant__card {
@@ -437,6 +462,12 @@ input:checked + label > span.icon__heart::after {
 @media screen and (min-width: 1280px) {
   .restaurant__card {
     width: 350px;
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .restaurant__card {
+    width: 328px;
     height: 450px;
   }
 }

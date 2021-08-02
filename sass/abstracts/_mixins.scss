@@ -134,6 +134,12 @@
     }
 }
 
+@mixin xl-desktop-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, xl-desktop)) {
+        @content;
+    }
+}
+
 //positionning logo
 @mixin pos-logo {
     text-align: left;

@@ -67,7 +67,6 @@
             font-family: "Shrikhand", sans-serif;
         }
         &__icon {
-
             @include mixins.iphone-only {
                 font-size: 1.3rem;
             }
@@ -203,13 +202,10 @@
             transition: right 300ms ease-in-out;
         }
         &:hover &__description {
-            // @include mixins.fold-only {
-            // }
             width: 150px;
             @include mixins.iphone-only {
                 width: 230px;
             }
-            // width: 170px;
         }
     }
 }

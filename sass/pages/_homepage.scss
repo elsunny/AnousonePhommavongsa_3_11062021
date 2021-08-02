@@ -142,9 +142,12 @@
             }
             position: relative;
             &__favorite {
+                @include mixins.desktop-only {
+                    bottom: 65px;
+                }
                 position: absolute;
                 right: 5px;
-                bottom: 50px;
+                bottom: 48px;
                 height: 30px;
                 width: 30px;
             }
@@ -161,6 +164,10 @@
     }
     @include mixins.desktop-only {
         width: 350px;
+        height: 450px;
+    }
+    @include mixins.xl-desktop-only {
+        width: 328px;
         height: 450px;
     }
     position: relative;
