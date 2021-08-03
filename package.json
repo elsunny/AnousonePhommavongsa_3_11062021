@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch main.scss public/css/style.css",
-    "serve": "serve public"
+    "serve": "serve public",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,7 @@
   },
   "author": "Anousone Phommavongsa",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/elsunny/AnousonePhommavongsa_3_11062021/issues"
   },
