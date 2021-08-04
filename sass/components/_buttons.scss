@@ -12,7 +12,6 @@
     cursor: pointer;
 }
 
-// .icon__heart::before,
 .icon__heart::before {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
@@ -27,7 +26,7 @@
 .icon__heart::after {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: 900; //fill heart font awesome
     position: absolute;
     top: -1rem;
     opacity: 0;
@@ -37,11 +36,11 @@
 }
 
 .icon__heart:hover::after {
-    animation: fill-color 900ms linear;
+    animation: fill-color 900ms linear both;
 }
 
 
-
+// checkbox to keep records chosen heart
 input:checked + label > span.icon__heart::before,
 input:checked + label > span.icon__heart::after {
     color: variables.$clr-prim;

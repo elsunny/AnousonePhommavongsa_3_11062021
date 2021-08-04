@@ -1,15 +1,10 @@
 @use "./variables";
 
-//shadow under ohmyfood title homepage
-@mixin bottom-shadow {
-    box-shadow: 0 0px 10px 0 rgb(0 0 0 / 40%);
-}
-
 @mixin text-gray {
     color: darken(variables.$clr-four, 50%);
 }
 
-//gradient colored main action button with shadow
+//action button with colors gradient and shadow
 @mixin btn-prim($clr-grad-start: variables.$clr-prim, $clr-grad-end: variables.$clr-second) {
     font-size: 16px;
     border-radius: 3em;
@@ -44,19 +39,20 @@
     }
 }
 
-// colored disk background for the navigation numbers
+// navigation numbers with colored disk background 
 @mixin clr-circle {
+    font-size: 16px;
     color: white;
     background-color: variables.$clr-prim;
     width: 1.5em;
     height: 1.5em;
     text-align: center;
-    line-height: 1.3rem;
+    line-height: 1.5em;
     border-radius: 50%;
     position: absolute;
 }
 
-//button with grey background
+//fonctionnement section - button with grey background
 @mixin btn-second($clr: variables.$clr-four) {
     font-size: 16px;
     background-color: $clr;
@@ -69,6 +65,7 @@
     padding: 1.5em 2em;
 }
 
+//grey background button change color 
 @mixin btn-second_over($clr: variables.$clr-prim) {
     &::before {
         content: "";
@@ -92,10 +89,10 @@
     }
 }
 
-// on homepage card background
+// on homepage white card background
 @mixin card-background {
     font-size: 16px;
-    border-radius: 1rem;
+    border-radius: 1em;
     background-color: white;
     height: 18em;
     box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.5);
@@ -103,7 +100,7 @@
     margin-bottom: 1em;
 }
 
-//card label status "nouveau"
+// card label status "nouveau"
 @mixin card-status {
     font-size: 16px;
     background-color: variables.$clr-third;
@@ -112,6 +109,14 @@
     color: darken(variables.$clr-third, 40%);
 }
 
+// positionning logo
+@mixin pos-logo {
+    text-align: left;
+    padding-left: 3rem;
+}
+
+
+// media queries
 @mixin iphone-only {
     @media screen and (min-width: map-get(variables.$breakpoints, iphone)) {
         @content;
@@ -136,8 +141,4 @@
     }
 }
 
-//positionning logo
-@mixin pos-logo {
-    text-align: left;
-    padding-left: 3rem;
-}
+

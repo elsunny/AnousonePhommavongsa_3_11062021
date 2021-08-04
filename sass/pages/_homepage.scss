@@ -6,6 +6,7 @@
 
 /* ///////////////////// homepage layout ///////////////// */
 
+//logo
 .header__logo__txt {
     @include mixins.tablet-only {
         @include mixins.pos-logo;

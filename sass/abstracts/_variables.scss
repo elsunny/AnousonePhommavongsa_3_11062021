@@ -1,12 +1,15 @@
+//color 
 $clr-prim: #9356dc;
 $clr-second: #ff79da;
 $clr-third: #99e2d0;
 $clr-four: rgb(234, 234, 234);
 
+//shadows
 $shadow: 2px 2px 5px -3px rgb(0 0 0 / 50%);
 
 $shadow-accent: 3px 3px 7px -3px rgb(0 0 0 / 50%);
 
+//media queries screen size
 $breakpoints: (
   fold: 280px,
   iphone: 320px,
@@ -15,8 +18,8 @@ $breakpoints: (
   xl-desktop: 1600px,
 );
 
-$ft-prim: 1.6rem;
 
+//space size
 $spacer-s: 16px;
 
 $spacer-l: 50px;

@@ -3,6 +3,7 @@
 @use "../components/buttons";
 @use "../layout/footer";
 
+//logo and arrow back button
 .header {
     position: relative;
     &__arrow {
@@ -24,6 +25,7 @@
     }
 }
 
+//page layout
 .restaurant {
     //menu background overflow the image
     border-radius: 2.5rem 2.5rem 0 0;
