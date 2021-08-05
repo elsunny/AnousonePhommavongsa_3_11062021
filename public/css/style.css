@@ -159,7 +159,7 @@ h1 {
 }
 
 .icon__heart:hover::after {
-  animation: fill-color 900ms linear both;
+  animation: fill-color 900ms linear;
 }
 
 input:checked + label > span.icon__heart::before,
