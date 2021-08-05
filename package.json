@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "sass --watch main.scss public/css/style.css",
     "serve": "serve public",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/"
   },
   "repository": {
     "type": "git",
