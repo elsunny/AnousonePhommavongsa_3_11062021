@@ -7,12 +7,14 @@
   }
   padding-bottom: variables.$spacer-l;
   background-color: darken(variables.$clr-four, 70%);
-  &__logo {
+  // logo setup
+  &__logo { 
     h3 {
       color: white;
       padding: 1rem 0 1rem 1rem;
     }
   }
+  // navigation link setup
   &__nav {
     a {
       color: white;

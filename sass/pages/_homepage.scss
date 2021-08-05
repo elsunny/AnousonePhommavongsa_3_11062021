@@ -6,7 +6,7 @@
 
 /* ///////////////////// homepage layout ///////////////// */
 
-//logo
+//logo positionning
 .header__logo__txt {
     @include mixins.tablet-only {
         @include mixins.pos-logo;
@@ -38,7 +38,7 @@
     }
 }
 
-//explorez section
+//explorez section title et subtitle
 .explorez {
     display: flex;
     flex-direction: column;
@@ -65,6 +65,7 @@
     }
 }
 
+//position of the navigation elements
 .navigation__title,
 .restaurants__title {
     padding-top: variables.$spacer-l;
@@ -77,18 +78,23 @@
     &__btns {
         @include mixins.desktop-only {
             flex-wrap: wrap;
-            flex-direction: initial;
+            flex-direction: initial; // direction become horizontal
             justify-content: space-around;
         }
+        //positionning
         display: flex;
-        flex-direction: column;
+        flex-direction: column; // direction is vertical
         justify-content: center;
         align-items: center;
         &__btn {
-            @include mixins.btn-second();
-            @include mixins.btn-second-over();
+            @include mixins.btn-second(); //set up button
+            @include mixins.btn-second-over(); // change color of the button on hover
             font-size: 13px;
             @include mixins.iphone-only {
+                width: 280px;
+                // margin: 10px auto;
+            }
+            @include mixins.iphone-l-only {
                 width: 320px;
             }
             @include mixins.tablet-only {
@@ -98,6 +104,7 @@
                 width: 390px;
             }
             position: relative;
+            // place a purple circle background
             span:nth-child(1) {
                 @include mixins.clr-circle;
                 position: absolute;
@@ -120,7 +127,7 @@
 }
 
 .restaurants {
-    //restaurant background on homepage
+    //restaurant grey background on homepage
     background-color: variables.$clr-four;
     &__main {
         @include mixins.tablet-only {
@@ -142,6 +149,7 @@
                 margin: 0 34px;
             }
             position: relative;
+            // heart favorite positionning
             &__favorite {
                 @include mixins.desktop-only {
                     bottom: 65px;
@@ -158,9 +166,13 @@
 
 .restaurant__card {
     // restaurant card background layout
+    // card sizes
     @include mixins.card-background;
     width: 260px;
     @include mixins.iphone-only {
+        width: 300px;
+    }
+    @include mixins.iphone-l-only {
         width: 330px;
     }
     @include mixins.desktop-only {
@@ -172,17 +184,18 @@
         height: 450px;
     }
     position: relative;
-    // restaurant status nouveau display
+    // restaurant status nouveau display regarding the dataset 
     &[data-status="new"] > .restaurant__card__status {
         @include mixins.card-status;
         position: absolute;
         top: 1rem;
         right: 1rem;
     }
+    // restaurant status nouveau display regarding the dataset 
     &[data-status="old"] > .restaurant__card__status {
         display: none;
     }
-    // image style layout
+    // image size in the card
     &__img {
         @include mixins.desktop-only {
             height: 22em;

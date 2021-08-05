@@ -1,3 +1,4 @@
+// initialization 
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
   box-sizing: border-box;
 }
 
+//format a tag link
 a,
 a:visited {
   text-decoration: none;

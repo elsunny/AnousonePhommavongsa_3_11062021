@@ -6,6 +6,7 @@
 //logo and arrow back button
 .header {
     position: relative;
+    //arrow positionning
     &__arrow {
         @include mixins.tablet-only {
             font-size: 25px;
@@ -16,6 +17,7 @@
         top: 25px;
         left: 20px;
     }
+    //logo
     &__logo {
         &__txt {
             @include mixins.tablet-only {
@@ -27,12 +29,12 @@
 
 //page layout
 .restaurant {
-    //menu background overflow the image
+    //menu grey background overflow the image
     border-radius: 2.5rem 2.5rem 0 0;
     background-color: variables.$clr-four;
     margin-top: -2rem;
     position: relative;
-    //landing picture
+    //landing picture and positionning
     &__picture {
         overflow: hidden;
         & img {
@@ -48,6 +50,7 @@
             height: 29rem;
         }
     }
+    // restaurant title setup and position
     &__title {
         @include mixins.iphone-only {
             padding-top: 2.5rem;
@@ -70,11 +73,15 @@
             padding-left: variables.$spacer-s;
             font-family: "Shrikhand", sans-serif;
         }
+        //heart icon
         &__icon {
             @include mixins.iphone-only {
                 font-size: 1.3rem;
-                left: 320px;
+                left: 280px;
                 top: 40px;
+            }
+            @include mixins.iphone-l-only {
+                left: 320px;
             }
             @include mixins.tablet-only {
                 font-size: 1.4rem;
@@ -109,6 +116,7 @@
     &__main {
         padding: 0 1rem;
     }
+    // main course title setup
     &__title {
         @include mixins.text-gray;
         text-transform: uppercase;
@@ -116,6 +124,7 @@
         letter-spacing: -0.7px;
         position: relative;
         font-family: roboto, sans-serif;
+        // colored line under the main course title
         &::before {
             content: "";
             display: inline-block;
@@ -126,7 +135,9 @@
             bottom: -2px;
         }
     }
+    // meal set up
     &__meal {
+        // white round card 
         @include mixins.btn-second(white);
         @include mixins.iphone-only {
             line-height: 1.5rem;
@@ -147,6 +158,13 @@
         position: relative;
         margin: 1rem auto;
         &__description {
+            @include mixins.iphone-l-only {
+                width: 270px;       // give the size of the description text shown
+            }
+            @include mixins.tablet-only {
+                width: 285px;
+            }
+            width: 210px;
             padding: 10px;
             padding-left: 20px;
             p {
@@ -155,7 +173,8 @@
                 font-weight: 300;
             }
             * {
-                @include mixins.iphone-only {
+                // all the description content is written on a single line and replace by ellipsis if no enough place
+                @include mixins.fold-only {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -163,12 +182,14 @@
             }
         }
         &__price {
+            //position of the price
             position: absolute;
             right: 10px;
             bottom: 10px;
             font-weight: 600;
         }
         &__check {
+            //check icon specifications
             @include mixins.iphone-only {
                 width: 70px;
             }
@@ -177,7 +198,7 @@
             justify-content: center;
             align-items: center;
             background-color: variables.$clr-third;
-            transform: translateX(130px);
+            transform: translateX(130px); //offset move the check icon outside the card
             position: absolute;
             top: 0;
             right: 0;
@@ -185,7 +206,7 @@
             transition: all 300ms ease-in-out;
             .icon__check {
                 width: fit-content;
-                transform: rotate(180deg);
+                transform: rotate(-180deg); // reverse the check icon
                 margin: 0 auto;
             }
         }
@@ -195,13 +216,14 @@
             align-items: center;
         }
         &:hover &__check {
-            transform: translateX(0);
+            transform: translateX(0); // the check button is bring on the card
             transition: transform 300ms ease-in-out;
             .icon__check {
-                transform: rotate(0deg);
-                transition: transform 600ms ease-in-out;
+                transform: rotate(0deg); // rotation check icon finish
+                transition: transform 600ms ease-in-out; 
             }
         }
+        // price move on hover
         &:hover &__price {
             @include mixins.iphone-only {
                 right: 76px;
@@ -212,10 +234,16 @@
             transition: right 300ms ease-in-out;
         }
         &:hover &__description {
-            width: 150px;
             @include mixins.iphone-only {
+                width: 180px;
+            }
+            @include mixins.iphone-l-only {
                 width: 230px;
             }
+            @include mixins.tablet-only {
+                width: 300px;
+            }
+            width: 150px;
         }
     }
 }

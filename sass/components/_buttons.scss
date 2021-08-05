@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
-//heart button icon
+// fontawesome icon setup
 .icon {
     display: inline-block;
     font-style: normal;
@@ -12,6 +12,7 @@
     cursor: pointer;
 }
 
+//  heart icon black outline shown with transition to fade out
 .icon__heart::before {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
@@ -21,8 +22,11 @@
     left: 0;
     font-size: 1.4em;
     color: black;
+    opacity: 1;
+    transition: opacity 800ms ease-in-out;
 }
 
+// plain heart icon set to opacity 0
 .icon__heart::after {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
@@ -33,21 +37,20 @@
     left: 0;
     font-size: 1.4em;
     color: variables.$clr-prim;
+    transition: opacity 1000ms ease-in-out;
 }
 
-.icon__heart:hover::after {
-    animation: fill-color 900ms linear;
+// when check box clicked it change the opacity of the label heart black outline icon disappear
+input:checked + label > .icon__heart::before {
+    opacity: 0;
 }
 
-
-// checkbox to keep records chosen heart
-input:checked + label > span.icon__heart::before,
-input:checked + label > span.icon__heart::after {
-    color: variables.$clr-prim;
-    font-weight: 900;
+// when check box clicked it change the opacity of the label the heart icon is filled with color
+input:checked + label > .icon__heart::after {
+    opacity: 1;
 }
 
-// checked animation on restaurant page
+// check icon animation on restaurant page
 .icon__check::after {
     content: "\f058";
     font-family: "Font Awesome 5 Free";

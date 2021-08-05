@@ -116,9 +116,21 @@
 }
 
 
-// media queries
+// media queries definition regarding breakpoints variables
+@mixin fold-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, fold)) {
+        @content;
+    }
+}
+
 @mixin iphone-only {
     @media screen and (min-width: map-get(variables.$breakpoints, iphone)) {
+        @content;
+    }
+}
+
+@mixin iphone-l-only {
+    @media screen and (min-width: map-get(variables.$breakpoints, iphone-l)) {
         @content;
     }
 }
